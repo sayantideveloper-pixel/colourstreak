@@ -1,0 +1,2138 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+                    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X0M7QDZXKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X0M7QDZXKF');
+</script>
+    <title>Colourstreak India Pvt Ltd</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colourstreak">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Colourstreak India Pvt Ltd">
+    <!-- favicon icon -->
+
+    <link rel="shortcut icon" href="newimg/logo/brandfavicons.png">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="demos/branding-studio/branding-studio.css" />
+
+    <style>
+         /* Modal Styles */
+    #thankYouModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #thankYouModal .modal-content {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #thankYouModal button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #thankYouModal button:hover {
+      background-color: #0056b3;
+    }
+        .dropdowninclude {
+            position: relative;
+        }
+
+        .dropdownmenus {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #b4b0b0;
+            /* background: #fff6f3; */
+            background: #f8e1da;
+            display: none;
+            color: black;
+            flex-direction: column;
+            min-width: 180px;
+            border-radius: 5px;
+            overflow: hidden;
+
+        }
+
+        .dropdownmenus a:not(:last-child) {
+
+            border-bottom: 1px solid #444;
+        }
+
+        .dropdownmenus a {
+            padding: 10px;
+
+        }
+
+        #videooverlay {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99;
+        }
+
+        #closevideo {
+            position: fixed;
+            z-index: 999999;
+            right: 4%;
+            top: 19%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 100%;
+            background: white;
+            font-weight: 700;
+            color: #151515;
+            cursor: pointer;
+            display: none;
+        }
+
+        .videobox {
+            position: fixed;
+            z-index: 99999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50%;
+            height: auto;
+            display: none;
+
+        }
+
+
+        .overtext {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 0px;
+            padding: 0px 8px;
+            transition: all 0.3s ease;
+        }
+
+
+        .overtext h2 {
+            font-size: 25px;
+            margin-bottom: 5px;
+            color: white;
+            font-weight: 400;
+        }
+
+        .overtext p {
+            font-size: 16px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        .maincard:hover .overtext {
+            height: 120px;
+        }
+
+
+      
+
+
+        @media(min-width:992px) {
+            .dropdowninclude:hover .dropdownmenus {
+                display: block;
+
+            }
+             #mobilecards {
+                display: none;
+                border: 1px solid red;
+                
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            .dropdownmenus {
+                position: static;
+                width: 100%;
+            }
+
+            .dropdowninclude.open .dropdownmenus {
+                display: flex;
+                flex-direction: column;
+                background: #333;
+
+            }
+                .sectionbox {
+                display: none;
+            }
+
+            #mobilecards {
+                display: block;
+                padding-top: 14px;
+                padding-bottom: 14px;
+               
+            }
+            .serviceblocks {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 7px;
+                
+            }
+            .picdiv {
+                width: 50%;
+                border-radius: 15px;
+            }
+            .picdiv img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+           
+            .icondiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* border: 1px solid red; */
+                width: 50%;
+                gap: 5px;
+                text-align: center;
+                border-radius: 15px;
+               
+                
+            }
+            .btnservicestyl {
+            padding: 2px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 10px;
+          
+            
+            }
+            .btnservicestyl span {
+                background: #151515;
+                border-radius: 15px;
+                padding: 0px 18px;
+                
+            }
+            .btnservicestyl a {
+               /* border: 1px solid red;  */
+               padding: 2px 5px;
+               display: inline-block;
+               vertical-align: middle;
+               font-size: 14px;
+               
+
+            }
+            .btnservicestyl i {
+                color: #ffff;
+                font-size: 12px;
+            }
+
+
+        }
+
+
+        .myfont {
+            font-size: 90px;
+        }
+
+        @media(max-width:1024px) {
+            .myfont {
+                font-size: 30px;
+            }
+        }
+
+        @media(min-width:768px) {
+            .stack-card .stack-item {
+                position: sticky !important;
+                padding-top: 0 !important;
+                top: 0 !important;
+            }
+        }
+
+        @media(min-width:1024px) {
+            #closevideo {
+                position: fixed;
+                z-index: 999999;
+                right: 4%;
+                top: 6%;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 100%;
+                background: white;
+                font-weight: 700;
+                color: #151515;
+                cursor: pointer;
+                display: none;
+            }
+
+            .videobox {
+                position: fixed;
+                z-index: 99999;
+                left: 50%;
+                top: 38%;
+                transform: translate(-50%, -50%);
+                max-width: 33%;
+                height: 55vh;
+                display: none;
+
+            }
+            .videobox video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+       
+        
+    </style>
+             <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8KPQLWD');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b"
+    class="overflow-x-hidden custom-cursor">
+                    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8KPQLWD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- start cursor -->
+    <div class="cursor-page-inner">
+        <div class="circle-cursor circle-cursor-inner"></div>
+        <div class="circle-cursor circle-cursor-outer"></div>
+    </div>
+    <!-- end cursor -->
+    <!-- start header -->
+    <header>
+        <!-- start navigation -->
+        <nav
+            class="navbar navbar-expand-lg header-light bg-white border-bottom border-color-transparent-dark-very-light disable-fixed">
+            <div class="container-fluid">
+                <div class="col-auto">
+                    <a class="navbar-brand" href="index.html" aria-label="logo">
+                        <img src="newimg/logo/Logo-min.png" alt="companylogo" class="default-logo">
+                        <img src="newimg/logo/Logo-min.png" alt="companylogo" class="alt-logo">
+                        <img src="newimg/logo/Logo-min.png" alt="mobilelogo" class="mobile-logo">
+                    </a>
+                </div>
+                <div class="col-auto menu-order left-nav">
+                    <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link"
+                                    aria-label="link">Home</a></li>
+                            <li class="nav-item"><a href="#aboutsection" class="nav-link" aria-label="link">About</a>
+                            </li>
+                            <li class="nav-item dropdowninclude">
+                                <a href="#servicesection" class="nav-link dropdowntoggle" aria-label="link">Services
+                                    ▾</a>
+                                <div class="dropdownmenus">
+                                    <a href="https://designs.colourstreak.com/">Graphic Design</a>
+                                    <a href="https://digital-marketing.colourstreak.com/">Digital Marketing</a>
+                                    <a href="https://web.colourstreak.com/">Web Developement</a>
+                                    <a href="https://signage.colourstreak.com/">Signage</a>
+                                    <a href="javascript:void(0)">Digital Print</a>
+                                    <a href="javascript:void(0)">Interior Design</a>
+                                </div>
+
+                            </li>
+                            <li class="nav-item"><a href="#clientsection" class="nav-link" aria-label="link">Clients</a>
+                            </li>
+                            <li class="nav-item"><a href="#contactus" class="nav-link" aria-label="link">Contact</a>
+                            </li>
+                            <!-- <li class="nav-item"><a href="demo-branding-studio-blog.html" class="nav-link" aria-label="link">Blog</a></li> -->
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto ms-auto d-none d-lg-flex">
+                    <div class="header-icon">
+                        <span class="text-dark-gray d-none d-xl-block">High quality <span
+                                class="text-decoration-line-bottom fw-600">digital experience.</span></span>
+                        <div class="header-button ms-25px">
+                            <a href="mailto:connect@colourstreak.com"
+                                class="btn border-1 btn-transparent-light-gray btn-medium btn-rounded left-icon btn-switch-text"
+                                aria-label="link">
+                                <span>
+                                    <span><i class="feather icon-feather-mail"></i></span>
+                                    <span class="btn-double-text" data-text="Get in touch">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navigation -->
+    </header>
+    <!-- end header -->
+    <!-- start banner -->
+    <section
+        class="p-0 top-space-margin pe-4 ps-4 xxl-pe-2 xxl-ps-2 lg-pe-0 lg-ps-0 lg-pt-70px md-pt-50px overflow-hidden">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xxl-4 col-xl-5 col-lg-8 text-center text-xl-start"
+                    data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [100, 0], "staggervalue": 300, "duration": 1200, "easing": "easeOutCubic" }'>
+                    <h1 class="text-dark-gray ls-minus-3px mb-50px sm-mb-30px"><span class="highlight-separator pb-0"
+                            data-shadow-animation="true" data-animation-delay="1500">Building brands,<span><img
+                                    src="images/highlight-separator-01.svg" alt="highlight-separator"></span></span> one success story at a
+                        time.</h1>
+                    <div
+                        class="d-flex align-items-center justify-content-center justify-content-xl-start flex-sm-row flex-column">
+                        <a href="tel:9230986042"
+                            class="btn btn-large btn-dark-gray btn-box-shadow btn-rounded btn-switch-text left-icon xs-mb-30px">
+                            <span>
+                                <span>
+                                    <!-- <i class="feather icon-feather-briefcase"></i>   -->
+                                    <i class="bi bi-telephone-outbound"></i>
+                                </span>
+                                <span class="btn-double-text" data-text="Schedule a call">Schedule a call</span>
+                            </span>
+                        </a>
+                        <!-- <iframe src="newimg/video/Ardhangini Designs LLP - Teaser Video  Colourstreak - Colourstreak (720p, h264).mp4" class="position-relative d-inline-block text-center rounded-circle video-icon-box video-icon-medium popup-youtube ms-15px xs-ms-0" aria-label="video-link">
+                                <span class="video-icon border border-1 border-color-transparent-dark-very-light me-10px">
+                                    <i class="bi bi-play-fill text-base-color fs-24"></i> 
+                                </span>
+                                <span class="fs-18 fw-500 text-dark-gray">About agency</span>
+                            </iframe>                             -->
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-3 col-md-7 position-relative text-center d-flex justify-content-center align-items-center lg-pt-50px"
+                    data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <img class="position-absolute top-25px z-index-minus-2 animation-rotation-slow sm-w-80"
+                        src="images/demo-branding-studio-bg-01.jpg" alt="brandbackoverlay">
+                    <img src="newimg/webpimg/Girl-min.webp" alt="demogirl">
+                    <div
+                        class="position-absolute right-30px xl-right-minus-50px md-right-0px bottom-150px d-md-flex flex-column align-items-center justify-content-center">
+                        <img src="newimg/banner/logocircle.png" class="position-absolute" alt="circularlogo">
+                        <img src="newimg/banner/captioncircle.png" class="animation-rotation" alt="movinglogo">
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-5 xl-pt-50px d-flex flex-column align-items-end"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="d-flex align-items-end p-25px cover-background border-radius-15px h-200px w-300px sm-w-100 mb-20px"
+                        style="background-image: url('newimg/webpimg/custombnr.webp')">
+                        <div class="d-flex align-items-center">
+                            <span id="plyvbtn"
+                                style="padding: 5px 11px;  text-align: center; border-radius: 50% !important; background: white; cursor: pointer;">
+                                <i class="bi bi-play-fill text-base-color fs-24"></i>
+
+                            </span>
+                            <span class="fs-18 lh-22 fw-500 text-white ms-10px">The help you need, When you need
+                                it.</span>
+                        </div>
+                    </div>
+                    <div class="border-radius-15px bg-white w-300px sm-w-100 bg-white box-shadow-extra-large">
+                        <div class="d-flex align-items-center ps-25px pe-25px pt-20px pb-20px">
+                            <div>
+                                <span class="d-block lh-18">Trusted by</span>
+                                <span class="fs-18 fw-500 text-dark-gray d-block">Client review</span>
+                            </div>
+                            <div
+                                class="border-radius-30px text-white bg-base-color ps-15px pe-15px pt-2px pb-2px fs-18 lh-32 fw-500 ls-minus-1px d-inline-flex align-items-center ms-auto">
+                                <i class="bi bi-star-fill fs-14 me-5px"></i><span class="flex-shrink-0">4.8</span>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center pt-10px pb-10px ps-5px pe-5px border-top border-color-transparent-dark-very-light">
+                            <img src="newimg/webpimg/indian_clients_170x90.webp" alt="clientspicture">
+                            <div class="ms-5px">
+                                <h5 class="fw-700 text-dark-gray mb-0">10K<sup>+</sup></h5>
+                                <div class="fs-14 lh-16 text-dark-gray">Happy clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+    <!-- start section -->
+
+    <section class="py-0 sectionbox" id="servicesection" style="margin-top: 30px;">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <!-- start stack card -->
+                    <div class="stack-card cards" data-scale="false" data-top-space="0" data-top-padding="0">
+                        <div class="stack-item bg-seashell border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="0">
+                            <img class="position-absolute left-minus-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="shadowoverlay">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">01</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px">Bold And Unique <span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500"> Graphics Design.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="separator"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+                                                We elevate your online presence through SEO, social media, and
+                                                strategic,
+                                                data-driven campaigns—boosting visibility, engaging the right audience,
+                                                and turning meaningful interactions into <span
+                                                    class="text-decoration-line-bottom">measurable growth</span>
+                                                measurable growth across every platform.
+
+                                            </p>
+                                            <a href="https://designs.colourstreak.com/"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0 border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-m-0">
+                                            <img class="border-radius-15px w-100" src="newimg/webpimg/Graphic.webp"
+                                                alt="colourstreak_graphics">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/graphic.png" class="w-50 mb-5px" alt="colourstreak_graphics_icon">
+                                                <span class="fs-18 lh-20 text-white d-block">Graphic<br>Design</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stack-item bg-seashell border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="1">
+                            <img class="position-absolute bottom-minus-100px right-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="overlay_shadow">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">02</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px">Impactful Digital<span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500">Marketing.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="separator"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+
+
+
+                                                We elevate your online presence through SEO, social media, and
+                                                strategic, data-driven campaigns—boosting visibility, engaging the right
+                                                audience,
+                                                and turning meaningful interactions into
+                                                <span class="text-decoration-line-bottom"> measurable growth across
+                                                    every platform.</span>
+
+
+                                            </p>
+                                            <a href="https://digital-marketing.colourstreak.com/"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0 border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-me-0">
+                                            <img class="border-radius-15px w-100"
+                                                src="newimg/webpimg/Digital MArketing.webp" alt="digital_marketing">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/digital.png" class="w-50 mb-5px" alt="digital_marketing_icon">
+                                                <span class="fs-18 lh-20 text-white d-block">Digital<br>Marketing</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stack-item bg-seashell border-bottom border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="2">
+                            <img class="position-absolute left-minus-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="overlay_Shadow">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">03</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px">Build Responsive <span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500">Websites.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="separator"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+
+
+
+
+
+
+
+
+
+
+                                                We build responsive, <span
+                                                    class="text-decoration-line-bottom">user-friendly websites</span>
+                                                that look great and perform seamlessly. Optimized for speed,
+                                                accessibility,
+                                                and SEO, our sites deliver smooth experiences that engage visitors and
+                                                drive conversions across all devices.
+
+                                            </p>
+                                            <a href="https://web.colourstreak.com/"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0  border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-me-0">
+                                            <img class="border-radius-15px w-100" src="newimg/webpimg/Web-min.webp"
+                                                alt="website_picture">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/website.png" class="w-50 mb-5px" alt="website_icon">
+                                                <span
+                                                    class="fs-18 lh-20 text-white d-block">Responsive<br>Website</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stack-item bg-seashell border-bottom border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="2">
+                            <img class="position-absolute left-minus-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="overlay_shadow">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">04</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px"> Bold And Noticeable <span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500">Signage.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="separator"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+
+                                                We create <span class="text-decoration-line-bottom">impactful
+                                                    outdoor</span>, and indoor signage that attracts attention and
+                                                clearly
+                                                communicates your brand message. Our strategic, creative designs enhance
+                                                visibility,
+                                                strengthen identity, and leave a memorable impression wherever your
+                                                audience sees you.
+                                            </p>
+                                            <a href="https://signage.colourstreak.com/"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0  border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-me-0">
+                                            <img class="border-radius-15px w-100" src="newimg/webpimg/Signage.webp"
+                                                alt="signage_picture">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/signage.png" class="w-50 mb-5px" alt="signage_picture_icon">
+                                                <span
+                                                    class="fs-18 lh-20 text-white d-block">Eye-catching<br>Signage</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stack-item bg-seashell border-bottom border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="2">
+                            <img class="position-absolute left-minus-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="overlay_shadow">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">05</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px">Digital Printing <br> <span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500"> Services.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="overlay_shadow"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+                                                We deliver vibrant, high-quality <span
+                                                    class="text-decoration-line-bottom">print materials</span>. that
+                                                elevate your brand.
+                                                From brochures to packaging, our precise, creative solutions ensure
+                                                consistency,
+                                                professional appeal, and a strong visual identity across every
+                                                touchpoint.
+                                            </p>
+                                            <a href="javascript:void(0)"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0  border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-me-0">
+                                            <img class="border-radius-15px w-100"
+                                                src="newimg/webpimg/Digital Print.webp" alt="digital_print_card">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/printer.png" class="w-50 mb-5px" alt="digital_pint_icon">
+                                                <span class="fs-18 lh-20 text-white d-block">Digital<br>Prints</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stack-item bg-seashell border-bottom border-top border-color-transparent-dark-very-light overflow-hidden"
+                            data-index="2">
+                            <img class="position-absolute left-minus-80px z-index-minus-1 animation-rotation d-none d-lg-flex"
+                                src="images/demo-branding-studio-10.png" alt="overlay_Shadow">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center g-0">
+                                    <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
+                                        <span
+                                            class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">06</span>
+                                        <h2 class="fw-300 text-dark-gray mb-25px"> Corporate <span
+                                                class="highlight-separator pb-0 fw-500" data-shadow-animation="true"
+                                                data-animation-delay="500">Interiors Services.<span><img
+                                                        src="images/highlight-separator-09.svg" alt="separator"></span></span>
+                                        </h2>
+                                        <div class="text-end me-50px md-me-0"><i
+                                                class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i>
+                                        </div>
+                                        <div
+                                            class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
+                                            <p class="w-70 text-dark-gray mb-10px lg-w-90 sm-w-100">
+                                                We design stylish, functional homes and offices that reflect your <span
+                                                    class="text-decoration-line-bottom">
+                                                    personality.</span>
+                                                Our approach focuses on creating spaces that
+                                                inspire comfort, creativity,
+                                                and productivity while staying true to your individual taste. From
+                                                concept to completion, we pay attention to every detail.
+
+                                            </p>
+                                            <a href="javascript:void(0)"
+                                                class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto"
+                                                aria-label="link">
+                                                <span>
+                                                    <span><i class="feather icon-feather-briefcase"></i></span>
+                                                    <span class="btn-double-text" data-text="Know More">Know More</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-6 ps-7 border-start md-border-start-0  border-color-transparent-dark-very-light pt-12 pb-12 xxl-pt-8 xxl-pb-8 xxl-ps-4 xxl-pe-4 md-p-0 md-mb-50px">
+                                        <figure class="position-relative outside-box-right-5 xl-me-0">
+                                            <img class="border-radius-15px w-100"
+                                                src="newimg/webpimg/interior design.webp" alt="interior_Design_box">
+                                            <figcaption
+                                                class="position-absolute text-center border-radius-10px right-minus-50px md-right-30px md-top-30px top-minus-50px w-150px p-25px xxl-p-20px blur-box bg-base-color-transparent">
+                                                <img src="newimg/services/interior.png" class="w-50 mb-5px" alt="interior_icon">
+                                                <span class="fs-18 lh-20 text-white d-block">Interior<br>Design</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end stack card -->
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- end section -->
+    <!-- start section -->
+
+    <!-- end section -->
+    <!-- start section -->
+     <!-- about us -->
+    <!-- <section class="pt-0">
+        <div class="container">
+            <div class="row justify-content-center mb-45px md-mb-30px">
+                <div class="col-xl-7 col-lg-8 text-center"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div
+                        class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block">
+                        Agency services</div>
+                    <h2 class="fw-500 text-dark-gray">A Partner That Cares <span class="highlight-separator pb-0"
+                            data-shadow-animation="true" data-animation-delay="1500">About Your Success.<span><img
+                                    src="images/highlight-separator-03.svg" alt=""></span></span></h2>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center"
+                data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+              
+                <div class="col services-box-style-08 md-mb-30px mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/startegic.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+                        <div class="overtext">
+                            <h2>Strategic
+                                Branding</h2>
+                            <p>We build brand identities that are bold, consistent, and impossible
+                                to ignore.</p>
+                        </div>
+                        <div class="position-relative z-index-1 d-flex flex-column mt-auto" >
+                            <a href="javascript:void(0)" class="fs-22 fw-500 text-white d-block mb-10px">Strategic
+                                Branding</a>
+                            <p class="w-90 xl-w-100 text-white">We build brand identities that are bold, consistent, and impossible
+                                to ignore.</p>
+                         
+                        </div>
+
+                    </div>
+                </div>
+              
+                <div class="col services-box-style-08 md-mb-30px  mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/visualstory.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+                        <div class="overtext">
+                            <h2>Visual
+                                Storytelling</h2>
+                            <p>Our designs don’t just look good—they tell your brand’s story with
+                                impact.</p>
+                        </div>
+                                                   
+                        <div class="position-relative z-index-1 d-flex flex-column">
+                            <a href="javascript:void(0)" class="fs-22 fw-500 text-dark-gray d-block mb-10px">Visual
+                                Storytelling</a>
+                            <p class="w-90 xl-w-100">Our designs don’t just look good—they tell your brand’s story with
+                                impact.</p>
+                            <a href="javascript:void(0)"
+                                class="mt-auto h-50px w-50px rounded-circle bg-base-color d-flex align-items-center justify-content-center box-shadow-large box-shadow-hover"
+                                aria-label="link"><i
+                                    class="feather icon-feather-arrow-up-right fs-20 text-white"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+          
+                <div class="col services-box-style-08  mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/uiux.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+
+                        <div class="overtext">
+                            <h2>User-Focused UI/UX</h2>
+                            <p>We create seamless, intuitive digital experiences that keep users
+                                engaged. </p>
+                        </div>
+
+                                                 
+                        <div class="position-relative z-index-1 d-flex flex-column">
+                            <a href="javascript:void(0)"
+                                class="fs-22 fw-500 text-dark-gray d-block mb-10px">User-Focused UI/UX</a>
+                            <p class="w-90 xl-w-100">We create seamless, intuitive digital experiences that keep users
+                                engaged.</p>
+                         
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col services-box-style-08 md-mb-30px  mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/packaging.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+
+                        <div class="overtext">
+                            <h2>Packaging
+                                That Sells</h2>
+                            <p>Eye-catching packaging that speaks for your product on shelves and
+                                online. </p>
+                        </div>
+                                                
+                        <div class="position-relative z-index-1 d-flex flex-column">
+                            <a href="javascript:void(0)" class="fs-22 fw-500 text-dark-gray d-block mb-10px">Packaging
+                                That Sells</a>
+                            <p class="w-90 xl-w-100">Eye-catching packaging that speaks for your product—on shelves and
+                                online.</p>
+                            <a href="javascript:void(0)"
+                                class="mt-auto h-50px w-50px rounded-circle bg-base-color d-flex align-items-center justify-content-center box-shadow-large box-shadow-hover"
+                                aria-label="link"><i
+                                    class="feather icon-feather-arrow-up-right fs-20 text-white"></i></a>
+                        </div>
+                        <img class="position-absolute right-0px bottom-0px" src="newimg/whychoose/5th.png" alt="">
+                    </div>
+                </div>
+            
+                <div class="col services-box-style-08 md-mb-30px  mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/signage.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+
+                        <div class="overtext">
+                            <h2>Cross-Media
+                                Consistency</h2>
+                            <p>Designs optimized for digital and print, ensuring brand integrity
+                                everywhere. </p>
+                        </div>
+
+                                                
+                        <div class="position-relative z-index-1 d-flex flex-column">
+                            <a href="javascript:void(0)" class="fs-22 fw-500 text-dark-gray d-block mb-10px">Cross-Media
+                                Consistency</a>
+                            <p class="w-90 xl-w-100">Designs optimized for digital and print, ensuring brand integrity
+                                everywhere.</p>
+                            <a href="javascript:void(0)"
+                                class="mt-auto h-50px w-50px rounded-circle bg-base-color d-flex align-items-center justify-content-center box-shadow-large box-shadow-hover"
+                                aria-label="link"><i
+                                    class="feather icon-feather-arrow-up-right fs-20 text-white"></i></a>
+                        </div>
+                        <img class="position-absolute right-0px bottom-0px" src="newimg/whychoose/6th.png" alt="">
+                    </div>
+                </div>
+             
+                <div class="col services-box-style-08  mb-2">
+                    <div class="maincard border-radius-15px position-relative overflow-hidden pe-50px ps-50px pt-40px pb-40px xl-p-40px lg-p-30px md-p-40px xs-p-30px h-430px d-flex"
+                        style="background-image: url('newimg/whychoose/campaign.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+
+                        <div class="overtext">
+                            <h2>Creative
+                                Campaigns</h2>
+                            <p>Designs optimized for digital and print, ensuring brand integrity
+                                everywhere.</p>
+                        </div>
+
+
+                        <div class="position-relative z-index-1 d-flex flex-column">
+                            <a href="javascript:void(0)" class="fs-22 fw-500 text-dark-gray d-block mb-10px">Creative
+                                Campaigns</a>
+                            <p class="w-90 xl-w-100">We craft unique marketing campaigns that resonate and perform.</p>
+                            <a href="javascript:void(0)"
+                                class="mt-auto h-50px w-50px rounded-circle bg-base-color d-flex align-items-center justify-content-center box-shadow-large box-shadow-hover"
+                                aria-label="link"><i
+                                    class="feather icon-feather-arrow-up-right fs-20 text-white"></i></a>
+                        </div>
+                        <img class="position-absolute right-0px bottom-0px" src="newimg/whychoose/4th.png" alt="">
+                    </div>
+                </div>
+             
+            </div>
+            <div class="row mt-4 md-mt-50px">
+                <div class="col-12 text-center"
+                    data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <span class="fs-20 text-dark-gray">Let's make something great work together. <a
+                            href="tel:9230986042"
+                            class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom border-2 border-color-dark-gray fw-500">Got
+                            a project in mind?</a></span>
+                </div>
+            </div>
+        </div>
+    </section> -->
+     <!-- about us -->
+    <!-- end section -->
+    <!-- start section -->
+    <!-- <section class="py-0 ps-6 pe-6 xl-ps-3 xl-pe-3 md-ps-0 md-pe-0 position-relative overflow-hidden"> 
+            <div class="bg-base-color h-100 position-absolute top-0 start-0 z-index-minus-1 lg-w-100"  data-bottom-top="width:10%" data-center-top="width:100%;"></div>
+            <div class="container-fluid">
+                <div class="row justify-content-end g-0 flex-row-reverse"> 
+                    <div class="col-xl-5 col-lg-6 pt-7 pb-7 md-pb-5 sm-pt-50px sm-pb-50px tab-style-09 d-flex justify-content-between flex-column border-start md-border-start-0 border-color-transparent-white-very-light">
+                        <div class="ps-12 md-ps-4 sm-ps-0 pb-10 md-pb-5 position-relative z-index-9 text-center text-md-start">
+                            <span class="fs-24 lh-30 text-white">Crafting unique<br><span class="highlight-separator pb-0" data-shadow-animation="true" data-animation-delay="1500">stories for brands.<span><img src="images/highlight-separator-05-white.svg" alt=""></span></span></span>
+                           
+                            <ul class="nav nav-tabs border-0 flex-column align-items-start justify-content-start fs-45 lg-fs-30 mt-9 md-mt-5">
+                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a data-bs-toggle="tab" href="#tab_four1" class="nav-link active">Potato islands</a></li>
+                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a class="nav-link" data-bs-toggle="tab" href="#tab_four2">Skoda corporate</a></li>
+                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a class="nav-link" data-bs-toggle="tab" href="#tab_four3">Pixflow studio</a></li>
+                                <li class="nav-item p-0"><a class="nav-link" data-bs-toggle="tab" href="#tab_four4">Harddot stone</a></li>
+                            </ul>
+                          
+                        </div>
+                        <div class="border-top border-color-transparent-white-very-light ps-12 md-ps-4 sm-ps-0 text-center text-md-start">
+                            <span class="fs-20 d-block fw-500 mb-10px text-white pt-10 md-pt-5 sm-pt-30px">Every brand has a story.</span>
+                            <p class="text-white opacity-6 w-70 xxl-w-100 mb-0">We blend strategy, creativity, and emotion to craft narratives that are uniquely yours - stories that spark engagement and leave a lasting impression.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 pe-7 pt-7 pb-7 md-pt-0 md-ps-4 md-pe-4 sm-ps-0 sm-pe-0 sm-pb-50px">
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane interactive-banner-style-01 fade in active show" id="tab_four1">
+                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
+                                    <img class="w-100" src="https://placehold.co/800x800" alt="" />
+                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
+                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
+                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="text-white d-block mt-auto">Discover case study</a>
+                                        </div>
+                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
+                                    </figcaption>                            
+                                </figure>
+                            </div>
+                          
+                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four2">
+                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
+                                    <img class="w-100" src="https://placehold.co/800x800" alt="" />
+                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
+                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
+                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="text-white d-block mt-auto">Discover case study</a>
+                                        </div>
+                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
+                                    </figcaption>                            
+                                </figure>
+                            </div>
+                          
+                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four3">
+                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
+                                    <img class="w-100" src="https://placehold.co/800x800" alt="" />
+                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
+                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
+                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="text-white d-block mt-auto">Discover case study</a>
+                                        </div>
+                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
+                                    </figcaption>                            
+                                </figure>
+                            </div>
+                          
+                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four4">
+                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
+                                    <img class="w-100" src="https://placehold.co/800x800" alt="" />
+                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
+                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
+                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
+                                            <a href="demo-branding-studio-single-project-minimal.html" class="text-white d-block mt-auto">Discover case study</a>
+                                        </div>
+                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
+                                    </figcaption>                            
+                                </figure>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- end section -->
+    <!-- start section -->
+    <!-- <section>
+            <div class="container">
+                <div class="row justify-content-center mb-35px">
+                    <div class="col-xl-9 col-lg-12 text-center">
+                        <h2 class="fs-65 fw-500 text-dark-gray">Helping brands grow through smart digital marketing.</h2>
+                    </div>
+                </div>
+                <div class="row border-top border-bottom border-color-transparent-dark-very-light row-cols-1 row-cols-lg-3">
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin border-end md-border-end-0 md-border-bottom border-color-transparent-dark-very-light">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">2X</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Boosting revenue growth</span>
+                        <p>Empowering businesses by boosting consistent revenue growth.</p>
+                    </div>
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin border-end md-border-end-0 md-border-bottom border-color-transparent-dark-very-light position-relative">
+                        <span class="position-absolute top-25px right-25px bg-base-color border-radius-18px text-white fs-11 lh-24 fw-600 text-uppercase ps-15px pe-15px">Hot</span>
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">85%</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Empowering startup success</span>
+                        <p>We help startups turn bold ideas into scalable and market success.</p>
+                    </div>
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">25+</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Winning formula for startups</span>
+                        <p>Empowering early-stage businesses with tools that drive real success.</p>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center mt-6 sm-mt-50px">
+                    <div class="col-12 col-xxl-2 col-lg-3 text-center text-lg-start md-mb-30px">
+                        <span class="fs-18 text-dark-gray">Trusted by top brands</span>
+                    </div>
+                    <div class="col-12 col-xl-7 col-lg-9">
+                        <div class="row row-cols-1 row-cols-md-4 text-center justify-content-center clients-style-05">
+                           
+                            <div class="col sm-mb-40px">
+                                <div class="client-box">
+                                    <a href="#"><img src="images/logo-walmart-dark-gray.svg" class="h-30px" alt="" /></a> 
+                                </div>
+                            </div>
+                            
+                            <div class="col sm-mb-40px">
+                                <div class="client-box">
+                                    <a href="#"><img src="images/logo-logitech-dark-gray.svg" class="h-30px" alt="" /></a> 
+                                </div>
+                            </div>
+                          
+                            <div class="col sm-mb-40px">
+                                <div class="client-box">
+                                    <a href="#"><img src="images/logo-paypal-dark-gray.svg" class="h-30px" alt="" /></a> 
+                                </div>
+                            </div>
+                          
+                            <div class="col">
+                                <div class="client-box">
+                                    <a href="#"><img src="images/logo-monday-dark-gray.svg" class="h-30px" alt="" /></a> 
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- end section -->
+    <!-- start section -->
+   
+
+    <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/Graphic.jpg" alt="graphic_picture"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                <img src="newimg/services/graphic.png" class="w-30" alt="graphics_icon">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Graphic<br>Design</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="https://designs.colourstreak.com/" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/Digital MArketing.jpg" alt="digital_marketing_picture"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                
+
+                                <img src="newimg/services/digital.png" class="w-30" alt="digital_marketing_icon" data-no-retina="">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Digital<br>Marketing</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="https://digital-marketing.colourstreak.com/" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/Web-min.jpg" alt="website_picture"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                <img src="newimg/services/website.png" class="w-30" alt="website_icon">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Responsive<br>Website</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="https://web.colourstreak.com/" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/Signage.jpg" alt="signage_picture"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                <img src="newimg/services/signage.png" class="w-30" alt="signage_icon">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Signage<br>Products</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="https://signage.colourstreak.com/" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/Digital Print.jpg" alt="digital_print"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                <img src="newimg/services/digital.png" class="w-30" alt="digital_print_icon">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Printing<br>Services</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="javascript:void(0)" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="mobilecards" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="serviceblocks">
+                            <div class="picdiv"><img src="newimg/stackcards/interior design.jpg" alt="interior_designpicture"></div>
+                            <div class="icondiv bg-base-color-transparent blur-box">
+                                <img src="newimg/services/interior.png" class="w-30" alt="interior_icon">
+                                <span class="fs-22 lh-20 text-white d-block " style="line-height: 112%;">Interior<br>Services</span>
+                            </div>
+                        </div>
+                        <div class="btnservicestyl">
+                          
+                                <span style="display: flex; align-items: center;">
+                                    <a href="javascript:void(0)" class="text-white">Visit Website</a>
+                                <i class="bi bi-arrow-right icon-very-medium text-dark-gray"></i>
+                                </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+   
+
+
+
+    <!-- <section class="pb-0">
+            <div class="container">
+                <div class="row justify-content-center mb-30px">
+                    <div class="col-lg-7 col-md-10 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block">Agency services</div>
+                        <h2 class="fw-500 text-dark-gray">We're achieving <span class="highlight-separator pb-0" data-shadow-animation="true" data-animation-delay="1500">recognition & awards.<span><img src="images/highlight-separator-05.svg" alt=""></span></span></h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-11" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="row text-dark-gray border-bottom border-2 border-color-dark-gray g-0 xs-pb-20px">
+                            <div class="col-12 col-sm text-center pt-25px pb-25px xs-pt-0 xs-pb-0">
+                                <span class="fw-500">Year</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start"> 
+                                <span class="fw-500">Recognition</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="fw-500">Platform</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="fw-500">Project</span>
+                            </div>
+                            <div class="col-12 col-sm-1 align-self-center text-center text-md-start">
+
+                            </div>
+                        </div>
+                     
+                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
+                            <span class="reveal-overlay bg-dark-gray"></span>
+                            <div class="col-12 col-sm text-center align-self-center">
+                                <span class="reveal-title">2025</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Honors</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Awwwards</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Cropo identity</span>
+                            </div>
+                            <div class="col-12 col-sm-1 text-center align-self-center">
+                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
+                            </div>
+                            <div class="hover-reveal no-transition d-none d-xl-block">
+                                <div class="hover-reveal__inner">
+                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
+                            <span class="reveal-overlay bg-dark-gray"></span>
+                            <div class="col-12 col-sm text-center align-self-center">
+                                <span class="reveal-title">2025</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Site of the month</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">CSS Design awards</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Violator series</span>
+                            </div>
+                            <div class="col-12 col-sm-1 text-center align-self-center">
+                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
+                            </div>
+                            <div class="hover-reveal no-transition d-none d-xl-block">
+                                <div class="hover-reveal__inner">
+                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
+                            <span class="reveal-overlay bg-dark-gray"></span>
+                            <div class="col-12 col-sm text-center align-self-center">
+                                <span class="reveal-title">2024</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Site of the day</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">The portfolio</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Harddot stone</span>
+                            </div>
+                            <div class="col-12 col-sm-1 text-center align-self-center">
+                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
+                            </div>
+                            <div class="hover-reveal no-transition d-none d-xl-block">
+                                <div class="hover-reveal__inner">
+                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
+                            <span class="reveal-overlay bg-dark-gray"></span>
+                            <div class="col-12 col-sm text-center align-self-center">
+                                <span class="reveal-title">2024</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Site of the day</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">One page love</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Tailoring inteo</span>
+                            </div>
+                            <div class="col-12 col-sm-1 text-center align-self-center">
+                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
+                            </div>
+                            <div class="hover-reveal no-transition d-none d-xl-block">
+                                <div class="hover-reveal__inner">
+                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px xs-pb-0">
+                            <span class="reveal-overlay bg-dark-gray"></span>
+                            <div class="col-12 col-sm text-center align-self-center">
+                                <span class="reveal-title">2023</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">Mobile excellence</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">The portfolio</span>
+                            </div>
+                            <div class="col-12 col-sm align-self-center text-center text-md-start">
+                                <span class="reveal-title">CSS Awards</span>
+                            </div>
+                            <div class="col-12 col-sm-1 text-center align-self-center">
+                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
+                            </div>
+                            <div class="hover-reveal no-transition d-none d-xl-block">
+                                <div class="hover-reveal__inner">
+                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+    <!-- <section class="position-relative overflow-hidden">
+            <div class="container-fluid p-0">
+                <div class="row g-0 position-relative">
+                    <div class="col-12 marquee-rotate-down">
+                        <div class="swiper swiper-width-auto text-center bg-base-color pt-10px pb-10px outside-box-right-1 outside-box-left-1" data-slider-options='{ "slidesPerView": "auto", "spaceBetween":40, "centeredSlides": true, "speed": 20000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":1, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+                            <div class="swiper-wrapper marquee-slide">
+                               
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Building brands with soul and strategy.</div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Designing memorable brands that connect.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Branding solutions that drive growth.</div>
+                                </div>
+                               
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Smart branding for the modern world.</div>
+                                </div>
+                             
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Building brands with soul and strategy.</div>
+                                </div>
+                            
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Designing memorable brands that connect.</div>
+                                </div>
+                             
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Branding solutions that drive growth.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-white pt-10px pb-10px">Smart branding for the modern world.</div>
+                                </div>
+                            
+                            </div> 
+                        </div>
+                    </div>                    
+                    <div class="col-12 marquee-rotate-up z-index-minus-1">
+                        <div class="swiper swiper-width-auto text-center bg-extra-medium-gray pt-10px pb-10px outside-box-right-1 outside-box-left-1" data-slider-options='{ "slidesPerView": "auto", "spaceBetween":40, "centeredSlides": true, "speed": 20000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":1, "disableOnInteraction": false, "reverseDirection": true }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+                            <div class="swiper-wrapper marquee-slide">
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Elevating brands through design thinking.</div>
+                                </div>
+                               
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Crafting identities that stand out.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Where ideas become iconic brands.</div>
+                                </div>
+                          
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Creating cohesive brand experiences.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Elevating brands through design thinking.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Crafting identities that stand out.</div>
+                                </div>
+                           
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Where ideas become iconic brands.</div>
+                                </div>
+                              
+                                <div class="swiper-slide">
+                                    <div class="fs-60 fw-300 text-dark-gray pt-10px pb-10px">Creating cohesive brand experiences.</div>
+                                </div>
+                             
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- end section -->
+    <!-- start section -->
+
+     <section class="p-0 pe-4 ps-4 xxl-pe-2 xxl-ps-2 lg-pe-0 lg-ps-0  border-bottom border-top border-color-transparent-dark-very-light overflow-hidden">
+        <div class="container-fluid"
+            data-anime='{ "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [-90, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 600, "easing": "easeOutQuad" }'>
+            <div class="row row-cols-2 row-cols-xxl-4 row-cols-md-2">
+                <div
+                    class="col pt-40px pb-40px ps-60px pe-60px xxl-ps-20px xxl-pe-20px border-end xs-border-end-0 xl-border-bottom border-color-transparent-dark-very-light">
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray flex-shrink-0 mb-0 me-15px md-me-0 ">99<sup
+                                class="top-minus-20px text-base-color">^</sup></h2>
+                        <span class="fs-10 fw-500 text-dark-gray d-block text-center" style="line-height: 154%;">Client retention rate.</span>
+                    </div>
+                </div>
+                <div
+                    class="col pt-40px pb-40px ps-60px pe-60px xxl-ps-20px xxl-pe-20px border-end xl-border-end-0 xl-border-bottom border-color-transparent-dark-very-light">
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray flex-shrink-0 mb-0 me-15px md-me-0">98<sup
+                                class="top-minus-20px text-base-color">%</sup></h2>
+                        <span class="fs-10 fw-500 text-dark-gray d-block text-center" style="line-height: 154%;">Average ROI growth for brands.</span>
+                    </div>
+                </div>
+                <div
+                    class="col pt-40px pb-40px ps-60px pe-60px xxl-ps-20px xxl-pe-20px border-end xs-border-end-0 xs-border-bottom border-color-transparent-dark-very-light">
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray flex-shrink-0 mb-0 me-15px md-me-0">10K<sup
+                                class="top-minus-20px text-base-color">+</sup></h2>
+                        <span class="fs-10 fw-500 text-dark-gray d-block text-center" style="line-height: 154%;">Active clients.</span>
+                    </div>
+                </div>
+                <div class="col pt-40px pb-40px ps-60px pe-60px xxl-ps-20px xxl-pe-20px">
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray flex-shrink-0 mb-0 me-15px md-me-0">12<sup
+                                class="top-minus-20px text-base-color">+</sup></h2>
+                        <span class="fs-10 fw-500 text-dark-gray d-block text-center" style="line-height: 154%;">Years of digital expertise .</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+    <!-- start section -->
+    <section id="aboutsection">
+        <div class="container">
+            <div class="row justify-content-center justify-content-xl-start">
+                <div
+                    class="col-xl-4 col-lg-10 d-flex align-items-xl-start align-items-center flex-column lg-mb-50px text-center text-xl-start">
+                    <div class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block"
+                        data-anime='{"translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        who we are</div>
+                    <h2 class="fw-500 text-dark-gray mb-25px"
+                        data-anime='{"translateY": [30, 0], "perspective": [400,400], "scale": [1.1, 1], "rotateX": [-80, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        Where Design Meets Digital Impact.<span class="highlight-separator pb-0"
+                            data-shadow-animation="true" data-animation-delay="1500"><span><img
+                                    src="images/highlight-separator-02.svg" alt="highlight_separator"></span></span></h2>
+                    <p
+                        data-anime='{"el": "lines", "translateY": [30, 0], "perspective": [400,400], "scale": [1.1, 1], "rotateX": [-80, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        Discover how we bring brands to life with smart digital, visual, and creative solutions that
+                        truly connect.</p>
+                    <div class="mt-auto"
+                        data-anime='{"translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 800, "staggervalue": 300, "bounce": "easeOutQuad" }'>
+                        <img class="mb-5px w-70" src="images/logo-awwards.svg" alt="awards_logo">
+
+
+
+                        <p class="mb-0"><span class="text-dark-gray">Awards</span> - Site of the day 2025</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 offset-xl-1 sm-mb-30px"
+                    data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <img class="border-radius-15px w-100" src="newimg/webpimg/thin.webp" alt="creativity">
+                    <div
+                        class="d-block bg-base-color ps-15 pt-16 pb-13 sm-p-10 border-radius-15px mt-30px text-center text-md-start">
+                        <span class="fs-80 lh-80 fw-500 text-white ls-minus-3px">12<sup
+                                class="top-minus-40px fs-40">+</sup></span>
+                        <span class="text-white lh-20 d-inline-block sm-w-100">Years of trusted experience.</span>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-8"
+                    data-anime='{ "el": "childs", "translateY": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <figure class="position-relative m-0">
+                        <img class="border-radius-15px w-100" src="newimg/webpimg/wide.webp" alt="working_professionals">
+                        <figcaption
+                            class="position-absolute text-center border-radius-15px right-30px bottom-30px ps-30px pe-30px blur-box bg-white-transparent">
+                            <h2 class="fs-60 mx-auto mb-0 fw-600 text-dark-gray mt-20px">4.8</h2>
+                            <div class="text-base-color ls-2px lh-20">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <span class="text-dark-gray mb-20px d-inline-block">Google rating</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative overflow-hidden md-pt-0" id="clientsection">
+        <img src="images/demo-real-estate-07.png" alt="commenticon"
+            class="position-absolute left-100px top-50px z-index-minus-1 d-none d-lg-block"
+            data-bottom-top="transform: translate3d(80px, 0px, 0px);"
+            data-top-bottom="transform: translate3d(-180px, 0px, 0px);" />
+        <img src="images/demo-real-estate-08.png" alt="commenticon"
+            class="position-absolute right-100px top-100px z-index-minus-1 d-none d-lg-block"
+            data-bottom-top="transform:scale(1.4, 1.4) translate3d(0px, 0px, 0px);"
+            data-top-bottom="transform:scale(1, 1) translate3d(-400px, 0px, 0px);" />
+        <div class="container h-100">
+            <div class="row g-0">
+                <div class="col-lg-5 text-end md-mb-50px">
+                    <figure class="position-relative m-0">
+                        <img src="newimg/webpimg/customerreviews.webp" class="w-100 border-radius-15px" alt="customer_review">
+                        <figcaption
+                            class="position-absolute text-center border-radius-15px left-minus-30px md-left-30px bottom-30px ps-30px pe-30px blur-box bg-base-color-transparent">
+                            <h2 class="fs-60 mx-auto mb-0 fw-600 text-white mt-20px">4.8</h2>
+                            <div class="text-white fs-16 ls-2px lh-20">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <span class="text-white mb-20px d-inline-block">Google Rating</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div
+                    class="col-lg-6 offset-lg-1 col-md-12 pt-3 md-pt-0 border-start md-border-start-0 border-color-transparent-dark-very-light">
+                    <div class="swiper testimonials-style-14 position-relative swiper-dark-pagination h-100 text-center text-md-start"
+                        data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "pagination": { "el": ".swiper-pagination-bullets-05", "clickable": true, "dynamicBullets": false }, "effect": "slide" }'>
+                        <div class="swiper-wrapper h-100">
+                            <!-- start text slider item -->
+                            <div class="swiper-slide h-100 d-flex flex-column pb-50px">
+                                <div class="ps-14 md-ps-0">
+                                    <!-- <a href="#"><img src="images/logo-monday-dark-gray.svg" class="h-40px mb-15px d-block sm-mx-auto" alt=""></a> -->
+                                    <div class="d-flex gap-1 mb-1 justify-content-center justify-content-lg-start">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="star_rating">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="star_rating">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="star_rating">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="star_rating">
+                                        <img src="newimg/client/halfstar.png" width="20" height="20" alt="star_rating">
+
+                                    </div>
+                                    <span class="fs-24 d-block text-dark-gray w-85 xl-w-100 lg-pb-30px">
+                                        Great Experience I recently had the pleasure of working with Colourstrick, and I
+                                        must say, it was an exceptional experience.
+                                    </span>
+                                </div>
+                                <div
+                                    class="border-top border-color-transparent-dark-very-light mt-auto w-100 ps-14 md-ps-0 pt-35px">
+                                    <span class="d-block fs-20 text-dark-gray fw-500">Mukhesh Hyundai</span>
+                                    <span>Marketing Manager</span>
+                                </div>
+                            </div>
+                            <!-- end text slider item -->
+                            <!-- start text slider item -->
+                            <div class="swiper-slide h-100 d-flex flex-column pb-50px">
+                                <div class="ps-14 md-ps-0">
+                                    <!-- <a href="#"><img src="images/logo-walmart-dark-gray.svg" class="h-40px mb-15px d-block sm-mx-auto" alt=""></a> -->
+                                    <div class="d-flex gap-1 mb-1 justify-content-center justify-content-lg-start">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/halfstar.png" width="20" height="20" alt="staricon">
+                                    </div>
+                                        <span class="fs-24 d-block text-dark-gray w-85 xl-w-100 lg-pb-30px">
+                                                Just Amazing They come with amazing ideas that really made me impressed. Another
+                                                thing worth mentioning is their work.
+                                        </span>
+                                </div>
+                                <div
+                                    class="border-top border-color-transparent-dark-very-light mt-auto w-100 ps-14 md-ps-0 pt-35px">
+                                    <span class="d-block fs-20 text-dark-gray fw-500">Dr Sanchita Pakrashi</span>
+                                    <span>Dr Pakrashi's Clinic</span>
+                                </div>
+                            </div>
+                            <!-- end text slider item -->
+                            <!-- start text slider item -->
+                            <div class="swiper-slide h-100 d-flex flex-column pb-50px">
+                                <div class="ps-14 md-ps-0">
+                                    <!-- <a href="#"><img src="images/logo-paypal-dark-gray.svg" class="h-40px mb-15px d-block sm-mx-auto" alt=""></a> -->
+                                    <div class="d-flex gap-1 mb-1 justify-content-center justify-content-lg-start">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/halfstar.png" width="20" height="20" alt="staricon">
+
+                                    </div>
+                                    <span class="fs-24 d-block text-dark-gray w-85 xl-w-100 lg-pb-30px">
+                                        Excellent job Excellent job done.It's really good as attractive for targeted
+                                        consumer base. Good artwork done by Biswajit.</span>
+                                </div>
+                                <div
+                                    class="border-top border-color-transparent-dark-very-light mt-auto w-100 ps-14 md-ps-0 pt-35px">
+                                    <span class="d-block fs-20 text-dark-gray fw-500">Debal Basu</span>
+                                    <span>Owner Of Payrus Restro Cafe</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-100 d-flex flex-column pb-50px">
+                                <div class="ps-14 md-ps-0">
+                                    <!-- <a href="#"><img src="images/logo-paypal-dark-gray.svg" class="h-40px mb-15px d-block sm-mx-auto" alt=""></a> -->
+                                    <div class="d-flex gap-1 mb-1 justify-content-center justify-content-lg-start">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/halfstar.png" width="20" height="20" alt="staricon">
+
+                                    </div>
+                                    <span class="fs-24 d-block text-dark-gray w-85 xl-w-100 lg-pb-30px">
+                                        Thank you so much Suman, for the beautiful video card for my twin daughters rice
+                                        ceremony. He was an active listener and so patient.</span>
+                                </div>
+                                <div
+                                    class="border-top border-color-transparent-dark-very-light mt-auto w-100 ps-14 md-ps-0 pt-35px">
+                                    <span class="d-block fs-20 text-dark-gray fw-500">Shreyanka Saha</span>
+                                    <span>Client</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-100 d-flex flex-column pb-50px">
+                                <div class="ps-14 md-ps-0">
+                                    <!-- <a href="#"><img src="images/logo-paypal-dark-gray.svg" class="h-40px mb-15px d-block sm-mx-auto" alt=""></a> -->
+                                    <div class="d-flex gap-1 mb-1 justify-content-center justify-content-lg-start">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/star.png" width="20" height="20" alt="staricon">
+                                        <img src="newimg/client/halfstar.png" width="20" height="20" alt="staricon">
+
+                                    </div>
+                                    <span class="fs-24 d-block text-dark-gray w-85 xl-w-100 lg-pb-30px">
+                                        We are working with then from last 5 years and always they delighted us with
+                                        their work. Suman da is doing great job.</span>
+                                </div>
+                                <div
+                                    class="border-top border-color-transparent-dark-very-light mt-auto w-100 ps-14 md-ps-0 pt-35px">
+                                    <span class="d-block fs-20 text-dark-gray fw-500">Ashis Agarwal</span>
+                                    <span>Client</span>
+                                </div>
+                            </div>
+                            <!-- end text slider item -->
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start position-relative">
+                            <!-- start slider pagination -->
+                            <div
+                                class="swiper-pagination swiper-pagination-clickable swiper-pagination-style-2 swiper-pagination-bullets-05 text-center text-md-start ps-14 md-ps-0 bottom-0">
+                            </div>
+                            <!-- end slider pagination -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ms-4 me-4 xxl-ms-2 xxl-me-2 xl-ms-0 xl-me-0 border-radius-15px lg-no-border-radius bg-seashell mb-6"
+        id="contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-4 col-lg-5 md-mb-50px sm-mb-30px"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div
+                        class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block">
+                        Get in touch with us</div>
+                    <h2 class="fw-500 text-dark-gray mb-0">Let us help you get your project <span
+                            class="highlight-separator mb-0 pb-0 z-index-1" data-shadow-animation="true"
+                            data-animation-delay="500">started.<span><img src="images/highlight-separator-08.svg"
+                                    alt="separator"></span></span></h2>
+                </div>
+                <div class="col-md-7 offset-xxl-1">
+                    <!-- start contact form -->
+                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <form method="post" id="frmSubmit2">
+  <div class="position-relative form-group mb-20px">
+    <!-- <span class="form-icon"><i class="bi bi-person"></i></span> -->
+    <input type="text" name="name" placeholder="Your name*" required>
+  </div>
+  <div class="position-relative form-group mb-20px">
+    <!-- <span class="form-icon"><i class="bi bi-envelope"></i></span> -->
+    <input type="email" name="email" placeholder="Your email address*" required>
+  </div>
+  <input type="text" name="phone" placeholder="Your phone*" required>
+  <br><br>
+    <select class="form-select" name="service" aria-label="Default select example" required>
+          <option value="">Choose your Service</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Graphic Designing">Graphic Designing</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Signage">Signage</option>
+          <option value="Digital Print">Digital Print</option>
+          <option value="Interior Design">Interior Design</option>
+        </select>
+  <div style="text-align: center;">
+  <button class="btn btn-dark-gray btn-medium btn-rounded btn-box-shadow d-inline-flex align-items-center submit" type="submit" id="btnSubmit" style="    margin-top: 20px;
+    padding: 10px 96px" >Submit</button>
+  </div>
+  <div id="msg"></div>
+</form>
+<!-- ✅ Thank You Modal -->
+<div id="thankYouModal">
+  <div class="modal-content">
+    <h2>Thank You!</h2>
+    <p>Your submission was successful.</p>
+    <button onclick="document.getElementById('thankYouModal').style.display='none';">Close</button>
+  </div>
+</div>
+<script>
+jQuery('#frmSubmit2').on('submit', function(e){
+  e.preventDefault();
+
+  jQuery('#msg').html('Please wait...');
+  jQuery('#btnSubmit').attr('disabled', true);
+
+  jQuery.ajax({
+    url: 'https://script.google.com/macros/s/AKfycbw73z_OnGZbazoVFDsiYxQQeh030k_UI3Osq19RtG510kMB-glj3ww2IhoPLIsHcJps/exec',
+    type: 'POST',
+    data: jQuery(this).serialize(),
+    success: function(response) {
+      jQuery('#frmSubmit2')[0].reset();
+      jQuery('#msg').html('');
+      jQuery('#btnSubmit').attr('disabled', false);
+      document.getElementById('thankYouModal').style.display = 'flex'; // ✅ Show modal
+      console.log('Success:', response);
+    },
+    error: function(xhr, status, error) {
+      jQuery('#msg').html('Something went wrong. Please try again.');
+      jQuery('#btnSubmit').attr('disabled', false);
+      console.error('Error:', error);
+    }
+  });
+});
+</script>
+                    <!-- end contact form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+    <!-- start section -->
+    <!-- <section class="p-0">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-12 elements-social social-icon-style-11">
+                        <ul class="fs-18 dark border-top border-color-transparent-dark-very-light" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <li>
+                                <a class="facebook" href="https://www.facebook.com/" target="_blank">
+                                    <span class="fw-500">Facebook</span>
+                                    <i class="feather icon-feather-arrow-up-right text-base-color ms-5px"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="twitter" href="https://www.twitter.com" target="_blank">
+                                    <span class="fw-500">Twitter</span>
+                                    <i class="feather icon-feather-arrow-up-right text-base-color ms-5px"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dribbble" href="http://www.dribbble.com" target="_blank">
+                                    <span class="fw-500">Dribbble</span>
+                                    <i class="feather icon-feather-arrow-up-right text-base-color ms-5px"></i>
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="instagram" href="https://www.instagram.com" target="_blank">
+                                    <span class="fw-500">Instagram</span>
+                                    <i class="feather icon-feather-arrow-up-right text-base-color ms-5px"></i>
+                                </a> 
+                            </li>
+                              <li>
+                                <a class="instagram" href="https://www.instagram.com" target="_blank">
+                                    <span class="fw-500">Behance</span>
+                                    <i class="feather icon-feather-arrow-up-right text-base-color ms-5px"></i>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- end section -->
+    <!-- start footer -->
+    <footer class="ps-4 pe-4 xxl-pe-2 xxl-ps-2 lg-pe-0 lg-ps-0 cover-background sm-pt-50px sm-pb-50px"
+        style="background-image: url('images/demo-branding-studio-footer-bg-img.jpg')">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="myfont fw-300 ls-1px text-white">
+                        <span class="text-base-color">©</span> 2025
+                        Colourstreak </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-flex-start justify-content-lg-center pt-4 sm-pt-35px text-start text-md-start">
+                <!-- start footer logo -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+
+                    <a href="javascript:void(0)" class="footer-logo d-inline-block " aria-label="logo" style="margin-bottom: 8px;"><img
+                            src="newimg/logo/whiteclrlogo.png" alt="colourstreak_white_logo"></a>
+
+                    <p class="w-90 xxl-w-100 lg-w-80 md-w-100" style="margin-bottom: 5px;">
+                        <a href="javascript:void(0)" class="text-white" >
+                            Discover how we bring brands to life with smart digital, visual, and creative solutions that
+                            truly connect.
+                        </a>
+
+                    </p>
+
+                </div>
+                <!-- end footer logo -->
+                <!-- start footer address -->
+                <div class="col-xl-2 col-md-4 last-paragraph-no-margin lg-mb-10px">
+                    <p class="w-90 xxl-w-100 lg-w-80 md-w-100">
+                        <span class=" d-block ">
+                            We are on
+                        </span>
+                        <span class="d-flex gap-3 justify-content-start justify-content-md-start">
+                            <a href="https://www.facebook.com/Colourstreak/"><span class="text-white"><i
+                                        class="fa-brands fa-facebook-f"></i></span></a>
+                            <a href="https://www.behance.net/colourstreak"><span class="text-white"><i
+                                        class="fa-brands fa-behance"></i></span></a>
+                            <a href="https://www.youtube.com/@Colourstreak/featured"><span class="text-white"><i
+                                        class="fa-brands fa-youtube"></i></span></a>
+                            <a href="https://www.linkedin.com/company/colourstreak/"><span class="text-white"><i
+                                        class="fa-brands fa-linkedin"></i></span></a>
+                            <a href="https://www.instagram.com/colourstreak/?hl=en"><span class="text-white"><i
+                                        class="fa-brands fa-instagram"></i></span></a>
+                        </span>
+
+
+                    </p>
+
+
+
+                </div>
+                <div class="col-xl-2 col-md-4 last-paragraph-no-margin lg-mb-10px">
+
+                    <ul>
+                        <li>Location</li>
+                        <li><a href="javascript:void(0)">
+                                140, Aurobindo Sarani, Ground Floor, Shantiniketan Apartment, Kolkata, West Bengal
+                                700006.
+                            </a></li>
+                    </ul>
+
+                </div>
+                <!-- end footer address -->
+                <!-- start footer menu -->
+
+                <!-- end footer menu -->
+                <!-- start footer social -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+                    <ul>
+                        <li>Quick Links</li>
+                        <li><a href="#aboutsection">About</a></li>
+                        <li><a href="#servicesection">Service</a></li>
+                        <li><a href="#clientsection">Clients</a></li>
+                        <li><a href="#contactus">Contacts</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- end footer social -->
+                <!-- start footer menu -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+                    <ul>
+                        <li>Get In Touch</li>
+                        <li><a href="mailto:connect@colourstreak.com">connect@colourstreak.com</a></li>
+                        <li><a href="tel:9230986042">+91 92309 86041</a></li>
+                    </ul>
+                </div>
+                <!-- end footer menu -->
+                <!-- start footer back to top -->
+                <div class="col-xl-2 col-md-4">
+                    <a class="scroll-top text-base-color" aria-label="scroll" href="#">Back to top <i
+                            class="feather icon-feather-arrow-up text-base-color align-middle"></i></a>
+                </div>
+                <!-- end footer back to top -->
+            </div>
+        </div>
+    </footer>
+
+    <div id="videooverlay">
+    </div>
+    <span id="closevideo">
+        x
+    </span>
+
+    <div class="videobox" id=""> 
+
+        <video autoplay loop muted
+            src="newimg/video/Colourstreak Ad Reel.mp4"></video>
+    </div>
+
+
+    <!-- end footer -->
+    <!-- start crafto progressive blur -->
+    <div class="crafto-progressive-blur crafto-progressive-blur-bottom" blur-bottom="yes"
+        style="--progressive-blur-height:15vh"></div>
+    <!-- end crafto progressive blur -->
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        // MOBILE DROPDOWN TOGGLE SCRIPT
+        document.querySelectorAll('.dropdowntoggle').forEach(toggle => {
+            toggle.addEventListener('click', e => {
+                // only run on mobile
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    const parent = toggle.parentElement;
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function scrollsoomth() {
+            const allanchor = document.querySelectorAll('a[href^="#"]');
+
+
+            allanchor.forEach(function (element) {
+
+                element.addEventListener("click", function (e) {
+
+
+                    e.preventDefault();
+
+                    const elementWithname = element.getAttribute('href');
+
+
+
+                    const theTarget = document.querySelector(elementWithname);
+
+
+
+                    theTarget.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", scrollsoomth);
+    </script>
+
+    <script>
+        const closevideobtn = document.getElementById('closevideo');
+        const videobox = document.querySelector('.videobox');
+        const videooverlay = document.getElementById('videooverlay');
+        const plyvbtn = document.getElementById('plyvbtn');
+        closevideobtn.addEventListener("click", function () {
+            videooverlay.style.display = "none";
+            closevideobtn.style.display = "none";
+            videobox.style.display = "none"
+
+        })
+
+        plyvbtn.addEventListener("click", function () {
+            videooverlay.style.display = "block";
+            closevideobtn.style.display = "block";
+            videobox.style.display = "block"
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>

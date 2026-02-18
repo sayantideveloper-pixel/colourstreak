@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="newimg/logo/brandfavicons.png">
+
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="demos/branding-studio/branding-studio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        /* Modal Styles */
+        ul {
+            padding-left: 0px;
+        }
+
+        #thankYouModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #thankYouModal .modal-content {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #thankYouModal button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #thankYouModal button:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdowninclude {
+            position: relative;
+        }
+
+        .dropdownmenus {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #b4b0b0;
+            /* background: #fff6f3; */
+            background: #f8e1da;
+            display: none;
+            color: black;
+            flex-direction: column;
+            min-width: 180px;
+            border-radius: 5px;
+            overflow: hidden;
+
+        }
+
+        .dropdownmenus a:not(:last-child) {
+
+            border-bottom: 1px solid #444;
+        }
+
+        .dropdownmenus a {
+            padding: 10px;
+
+        }
+
+        #videooverlay {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99;
+        }
+
+        #closevideo {
+            position: fixed;
+            z-index: 999999;
+            right: 4%;
+            top: 19%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 100%;
+            background: white;
+            font-weight: 700;
+            color: #151515;
+            cursor: pointer;
+            display: none;
+        }
+
+        .videobox {
+            position: fixed;
+
+            z-index: 99999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 38vh;
+
+            display: none;
+
+        }
+
+
+        .overtext {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 0px;
+            padding: 0px 8px;
+            transition: all 0.3s ease;
+        }
+
+
+        .overtext h2 {
+            font-size: 25px;
+            margin-bottom: 5px;
+            color: white;
+            font-weight: 400;
+        }
+
+        .overtext p {
+            font-size: 16px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        .maincard:hover .overtext {
+            height: 120px;
+        }
+
+
+
+
+
+        @media(min-width:992px) {
+            .dropdowninclude:hover .dropdownmenus {
+                display: block;
+
+            }
+
+            #mobilecards {
+                display: none;
+                border: 1px solid red;
+
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            .dropdownmenus {
+                position: static;
+                width: 100%;
+            }
+
+            .dropdowninclude.open .dropdownmenus {
+                display: flex;
+                flex-direction: column;
+                background: #333;
+
+            }
+
+            .sectionbox {
+                display: none;
+            }
+
+            #mobilecards {
+                display: block;
+                padding-top: 14px;
+                padding-bottom: 14px;
+
+            }
+
+            .serviceblocks {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 7px;
+
+            }
+
+            .picdiv {
+                width: 50%;
+                border-radius: 15px;
+            }
+
+            .picdiv img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+
+            .icondiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* border: 1px solid red; */
+                width: 50%;
+                gap: 5px;
+                text-align: center;
+                border-radius: 15px;
+
+
+            }
+
+            .btnservicestyl {
+                padding: 2px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 10px;
+
+
+            }
+
+            .btnservicestyl span {
+                background: #151515;
+                border-radius: 15px;
+                padding: 0px 18px;
+
+            }
+
+            .btnservicestyl a {
+                /* border: 1px solid red;  */
+                padding: 2px 5px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+
+
+            }
+
+            .btnservicestyl i {
+                color: #ffff;
+                font-size: 12px;
+            }
+
+
+        }
+
+
+        .myfont {
+            font-size: 90px;
+        }
+
+        @media(max-width:1024px) {
+            .myfont {
+                font-size: 30px;
+            }
+        }
+
+        @media(min-width:768px) {
+            .stack-card .stack-item {
+                position: sticky !important;
+                padding-top: 0 !important;
+                top: 0 !important;
+            }
+        }
+
+        @media(min-width:1024px) {
+            #closevideo {
+                position: fixed;
+                z-index: 999999;
+                right: 4%;
+                top: 6%;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 100%;
+                background: white;
+                font-weight: 700;
+                color: #151515;
+                cursor: pointer;
+                display: none;
+            }
+
+            .videobox {
+                position: fixed;
+
+                z-index: 99999;
+                left: 50%;
+                top: 38%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 38vh;
+
+                display: none;
+
+            }
+        }
+
+        .bannerbox {
+
+            background: #fff6f3;
+            margin-top: 80px;
+        }
+
+        .leftbox {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 2%;
+
+        }
+
+        .rightbox {
+            width: 40%;
+        }
+
+        .mainbox {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        .mysection {
+            padding: 70px 0px;
+        }
+
+        @media(max-width:991px) {
+            .rightbox {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .mainbox {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+
+            .mysection {
+                padding: 30px 0px;
+            }
+
+            .leftbox {
+                margin-bottom: 30px;
+            }
+
+            .bnrtitle {
+                text-align: center;
+            }
+
+            .bnrpara {
+                text-align: center;
+            }
+        }
+
+        .mylist {
+
+            padding-left: 20px;
+        }
+
+        .mylist li {
+            position: relative;
+        }
+
+        .mylist li::before {
+            content: "\f00c";
+            position: absolute;
+            font-family: FontAwesome;
+            left: -22px;
+            font-size: 12px;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <!-- start navigation -->
+        <nav
+            class="navbar navbar-expand-lg header-light bg-white border-bottom border-color-transparent-dark-very-light disable-fixed">
+            <div class="container-fluid">
+                <div class="col-auto">
+                    <a class="navbar-brand" href="index.html" aria-label="logo">
+                        <img src="newimg/logo/Logo-min.png" alt="" class="default-logo">
+                        <img src="newimg/logo/Logo-min.png" alt="" class="alt-logo">
+                        <img src="newimg/logo/Logo-min.png" alt="" class="mobile-logo">
+                    </a>
+                </div>
+                <div class="col-auto menu-order left-nav">
+                    <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="index.html" class="nav-link" aria-label="link">Home</a></li>
+                            <li class="nav-item"><a href="index.html" class="nav-link" aria-label="link">About</a>
+                            </li>
+                            <li class="nav-item dropdowninclude">
+                                <a href="#servicesection" class="nav-link dropdowntoggle" aria-label="link">Services
+                                    ▾</a>
+                                <div class="dropdownmenus">
+                                    <a href="https://designs.colourstreak.com/">Graphic Design</a>
+                                    <a href="https://digital-marketing.colourstreak.com/">Digital Marketing</a>
+                                    <a href="https://web.colourstreak.com/">Web Developement</a>
+                                    <a href="https://signage.colourstreak.com/">Signage</a>
+                                    <a href="javascript:void(0)">Digital Print</a>
+                                    <a href="javascript:void(0)">Interior Design</a>
+                                </div>
+
+                            </li>
+                            <li class="nav-item"><a href="index.html" class="nav-link" aria-label="link">Clients</a>
+                            </li>
+                            <li class="nav-item"><a href="index.html" class="nav-link" aria-label="link">Contact</a>
+                            </li>
+                            <!-- <li class="nav-item"><a href="demo-branding-studio-blog.html" class="nav-link" aria-label="link">Blog</a></li> -->
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto ms-auto d-none d-lg-flex">
+                    <div class="header-icon">
+                        <span class="text-dark-gray d-none d-xl-block">High quality <span
+                                class="text-decoration-line-bottom fw-600">digital experience.</span></span>
+                        <div class="header-button ms-25px">
+                            <a href="mailto:connect@colourstreak.com"
+                                class="btn border-1 btn-transparent-light-gray btn-medium btn-rounded left-icon btn-switch-text"
+                                aria-label="link">
+                                <span>
+                                    <span><i class="feather icon-feather-mail"></i></span>
+                                    <span class="btn-double-text" data-text="Get in touch">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navigation -->
+    </header>
+
+    <div class="bannerbox">
+        <div class="mainbox">
+            <div class="rightbox ">
+                <img src="newimg/privacy/trprivacy.png" style="width: 100%; height: 100%;" alt="">
+            </div>
+            <div class="leftbox ">
+                <h2 class="bnrtitle fw-500 text-dark-gray">Privacy Policy</h2>
+                <p class="bnrpara text-dark-gray">Last Updated: Dec 22, 2025</p>
+            </div>
+        </div>
+    </div>
+    <section class="mysection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="d-flex justify-content-center align-items-center">
+                        <h4>Privacy Policy</h4>
+                    </div> -->
+                    <dl>
+                        <dt>
+                            <h3 class="fw-500 text-dark-gray mb-25px">Introduction</h3>
+                        </dt>
+                        <dd>
+                            <p class="text-dark-gray">
+                                At Colourstreak, we value and respect your privacy. This Privacy Policy outlines how we
+                                collect, use, and protect your personal information when you visit our website, interact
+                                with our services, or provide us with your details.
+                                By using our services, you agree to the practices outlined in this policy. If you have
+                                any
+                                questions about this Privacy Policy, please contact us at <a
+                                    href="mailto:connect@colourstreak.com"
+                                    style="color: blue;">connect@colourstreak.com</a>.
+                            </p>
+                        </dd>
+                    </dl>
+
+                    <dl>
+
+                        <h4 class="text-dark-gray">1. Information We Collect</h4>
+
+                        <p style="color: black; font-weight: 600; margin-bottom: 25px;">We may collect the following
+                            types of personal information:</p>
+                        <ul class="mylist">
+                            <li><strong style="color: black;">Contact Information:</strong> <span
+                                    class="text-dark-gray">Name, email address, phone number, company name.</span></li>
+                            <li><strong style="color: black;">Usage Data:
+
+                                </strong> <span class="text-dark-gray">Information about how you use our website and
+                                    services, including device
+                                    type,
+                                    browser information, IP address, and pages visited.
+                                </span>
+                            </li>
+
+                            <li> <strong style="color: black;">Payment Information:</strong> <span
+                                    class="text-dark-gray">When you make a purchase, we may collect billing information
+                                    and
+                                    payment details.</span>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+
+                    </dl>
+
+
+                    <dl>
+                        <h4 class="text-dark-gray">2. How We Use Your Information</h4>
+                      
+                    </dl>
+
+
+                        
+                    <dl>
+                        <dt class="text-dark-gray">
+                            Data Sharing
+                        </dt>
+                        <dd class="text-dark-gray">
+                            We do not sell, rent, or trade your personal information to third parties. However, we may
+                            share your information with trusted service providers to help us operate our business, such
+                            as payment processors, email services, or customer support tools. These third parties are
+                            obligated to protect your information and use it only for the services they provide to us.
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt class="text-dark-gray">Cookies and Tracking Technologies</dt>
+                        <dd class="text-dark-gray">
+                         We use cookies to track website usage and analyze trends, helping us understand how visitors interact with our site. Cookies also allow us to remember your preferences and login details, making your experience smoother and more personalized. This information helps us improve our content and refine our marketing strategies to better serve your needs. You can manage or disable cookies through your browser settings; however, please note that turning off cookies
+                          may affect certain features and your overall experience on the site.
+
+                           
+                            
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt class="text-dark-gray">Data Security</dt>
+                        <dd class="text-dark-gray">
+                            We implement reasonable security measures to protect your personal information from
+                            unauthorized access, alteration, or destruction. While we take steps to safeguard your data,
+                            no method of transmission over the internet is 100% secure. Therefore, we cannot guarantee
+                            complete security.
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt class="text-dark-gray">Your Data Rights</dt>
+                        <dd class="text-dark-gray">
+                            You have the right to access the personal information we hold about you and 
+                            to request corrections to any inaccurate or incomplete details. You may also ask 
+                            us to delete your personal data and opt out of marketing communications at any time by following the 
+                            unsubscribe instructions included in our emails. To exercise any of these rights or for 
+                            further assistance, please contact us at <a style="color: blue;" href="mailto:connect@colourstreak.com">connect@colourstreak.com</a>.
+                        </dd>
+                       
+                    </dl>
+
+                    <dl>
+
+                        <h4 class="text-dark-gray">3.Links to Third-Party Websites</h4>
+
+                         <dd class="text-dark-gray">
+                            Our website may contain links to third-party sites. We are not responsible for the privacy
+                            practices or content of those sites. We encourage you to review the privacy policies of any
+                            third-party websites before providing any personal information.
+                        </dd>
+                    </dl>
+
+                     <dl>
+
+                        <h4 class="text-dark-gray">4.Changes to This Privacy Policy</h4>
+
+                         <dd class="text-dark-gray">
+                           We reserve the right to update or change this Privacy Policy at any time. Any changes will
+                            be posted on this page with an updated effective date. We recommend that you periodically
+                            review this Privacy Policy to stay informed about how we are protecting your information.
+                        </dd>
+                    </dl>
+
+                     <dl>
+
+                        <h4 class="text-dark-gray">5.Contact Us</h4>
+
+                         <dd class="text-dark-gray">
+                            If you have any questions or concerns about our Privacy Policy or how we handle your
+                            personal data, please contact us at:
+                        </dd>
+                           <ul>
+                            <li><a href="mailto:connect@colourstreak.com">Email: connect@colourstreak.com</a></li>
+                            <li><a href="tel:9230986041">Phone: 92309 86041</a></li>
+                            <li>Address:140, Aurobindo Sarani, Ground Floor, Shantiniketan Apartment, Kolkata, West
+                                Bengal 700006.</li>
+                        </ul>
+                    </dl>
+                  
+
+                  
+
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="ps-4 pe-4 xxl-pe-2 xxl-ps-2 lg-pe-0 lg-ps-0 cover-background sm-pt-50px sm-pb-50px"
+        style="background-image: url('images/demo-branding-studio-footer-bg-img.jpg')">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="myfont fw-300 ls-1px text-white">
+                        <span class="text-base-color">©</span> 2025
+                        Colourstreak
+                    </div>
+
+                </div>
+            </div>
+            <div
+                class="row justify-content-flex-start justify-content-lg-center pt-4 sm-pt-35px text-start text-md-start">
+                <!-- start footer logo -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+
+                    <a href="javascript:void(0)" class="footer-logo d-inline-block " aria-label="logo"
+                        style="margin-bottom: 8px;"><img src="newimg/logo/whiteclrlogo.png" alt=""></a>
+
+                    <p class="w-90 xxl-w-100 lg-w-80 md-w-100" style="margin-bottom: 5px;">
+                        <a href="javascript:void(0)" class="text-white">
+                            Discover how we bring brands to life with smart digital, visual, and creative solutions that
+                            truly connect.
+                        </a>
+
+                    </p>
+
+                </div>
+                <!-- end footer logo -->
+                <!-- start footer address -->
+                <div class="col-xl-2 col-md-4 last-paragraph-no-margin lg-mb-10px">
+                    <p class="w-90 xxl-w-100 lg-w-80 md-w-100">
+                        <span class=" d-block ">
+                            We are on
+                        </span>
+                        <span class="d-flex gap-3 justify-content-start justify-content-md-start">
+                            <a href="https://www.facebook.com/Colourstreak/"><span class="text-white"><i
+                                        class="fa-brands fa-facebook-f"></i></span></a>
+                            <a href="https://www.behance.net/colourstreak"><span class="text-white"><i
+                                        class="fa-brands fa-behance"></i></span></a>
+                            <a href="https://www.youtube.com/@Colourstreak/featured"><span class="text-white"><i
+                                        class="fa-brands fa-youtube"></i></span></a>
+                            <a href="https://www.linkedin.com/company/colourstreak/"><span class="text-white"><i
+                                        class="fa-brands fa-linkedin"></i></span></a>
+                            <a href="https://www.instagram.com/colourstreak/?hl=en"><span class="text-white"><i
+                                        class="fa-brands fa-instagram"></i></span></a>
+                        </span>
+
+
+                    </p>
+
+
+
+                </div>
+                <div class="col-xl-2 col-md-4 last-paragraph-no-margin lg-mb-10px">
+
+                    <ul>
+                        <li>Location</li>
+                        <li><a href="javascript:void(0)">
+                                140, Aurobindo Sarani, Ground Floor, Shantiniketan Apartment, Kolkata, West Bengal
+                                700006.
+                            </a></li>
+                    </ul>
+
+                </div>
+                <!-- end footer address -->
+                <!-- start footer menu -->
+
+                <!-- end footer menu -->
+                <!-- start footer social -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+                    <ul>
+                        <li>Quick Links</li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Service</a></li>
+                        <li><a href="index.html">Clients</a></li>
+                        <li><a href="index.html">Contacts</a></li>
+                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- end footer social -->
+                <!-- start footer menu -->
+                <div class="col-xl-2 col-md-4 lg-mb-10px">
+                    <ul>
+                        <li>Get In Touch</li>
+                        <li><a href="mailto:connect@colourstreak.com">connect@colourstreak.com</a></li>
+                        <li><a href="tel:9230986042">+91 92309 86041</a></li>
+                    </ul>
+                </div>
+                <!-- end footer menu -->
+                <!-- start footer back to top -->
+                <div class="col-xl-2 col-md-4">
+                    <a class="scroll-top text-base-color" aria-label="scroll" href="#">Back to top <i
+                            class="feather icon-feather-arrow-up text-base-color align-middle"></i></a>
+                </div>
+                <!-- end footer back to top -->
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div class="crafto-progressive-blur crafto-progressive-blur-bottom" blur-bottom="yes"
+        style="--progressive-blur-height:15vh"></div>
+    <!-- end crafto progressive blur -->
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
