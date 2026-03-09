@@ -1051,91 +1051,492 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <!-- about us -->
     <!-- end section -->
     <!-- start section -->
-    <section class="py-0 ps-6 pe-6 xl-ps-3 xl-pe-3 md-ps-0 md-pe-0 position-relative overflow-hidden"> 
-            <div class="bg-base-color h-100 position-absolute top-0 start-0 z-index-minus-1 lg-w-100"  data-bottom-top="width:10%" data-center-top="width:100%;"></div>
-            <div class="container-fluid">
-                <div class="row justify-content-end g-0 flex-row-reverse"> 
-                    <div class="col-xl-5 col-lg-6 pt-7 pb-7 md-pb-5 sm-pt-50px sm-pb-50px tab-style-09 d-flex justify-content-between flex-column border-start md-border-start-0 border-color-transparent-white-very-light">
-                        <div class="ps-12 md-ps-4 sm-ps-0 pb-10 md-pb-5 position-relative z-index-9 text-center text-md-start">
-                            <span class="fs-24 lh-30 text-white">Crafting unique<br><span class="highlight-separator pb-0" data-shadow-animation="true" data-animation-delay="1500">stories for brands.<span><img src="images/highlight-separator-05-white.svg" alt="separator"></span></span></span>
-                           
-                            <ul class="nav nav-tabs border-0 flex-column align-items-start justify-content-start fs-45 lg-fs-30 mt-9 md-mt-5">
-                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a data-bs-toggle="tab" href="#tab_four1" class="nav-link active">Instagram Growth Strategy</a></li>
-                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a class="nav-link" data-bs-toggle="tab" href="#tab_four2">LinkedIn Lead Generation</a></li>
-                                <li class="nav-item p-0 mb-20px lg-mb-10px"><a class="nav-link" data-bs-toggle="tab" href="#tab_four3">Facebook Ad Campaigns</a></li>
-                                <li class="nav-item p-0"><a class="nav-link" data-bs-toggle="tab" href="#tab_four4">Content Strategy & Creation</a></li>
-                            </ul>
-                          
-                        </div>
-                        <div class="border-top border-color-transparent-white-very-light ps-12 md-ps-4 sm-ps-0 text-center text-md-start">
-                            <span class="fs-20 d-block fw-500 mb-10px text-white pt-10 md-pt-5 sm-pt-30px">Social Media Excellence - Real Results.</span>
-                            <p class="text-white opacity-6 w-70 xxl-w-100 mb-0">As a top social media marketing agency in Kolkata, we drive real engagement and ROI through data-driven campaigns and viral content strategies.</p>
+    <!-- start creative process section -->
+    <style>
+        .process-section { background: #faf8f5; position: relative; overflow: hidden; }
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 85, 35, 0.06);
+            z-index: 0;
+        }
+        .process-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 85, 35, 0.04);
+            z-index: 0;
+        }
+        /* Flip card container */
+        .flip-card {
+            perspective: 1200px;
+            height: 380px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+        /* Front & back faces */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        .flip-card-front {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 30px;
+        }
+        .flip-card-front .front-step-num {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--base-color, #ff5523);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--base-color, #ff5523);
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+        }
+        .flip-card-front .front-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255,85,35,0.08), rgba(255,85,35,0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+        .flip-card-front .front-icon i {
+            font-size: 36px;
+            color: var(--base-color, #ff5523);
+        }
+        .flip-card-front h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .flip-card-back {
+            background: var(--base-color, #ff5523);
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 35px;
+            color: #fff;
+        }
+        .flip-card-back .back-step-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .flip-card-back h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .flip-card-back p {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 18px;
+        }
+        .flip-card-back .back-tag {
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            align-self: flex-start;
+        }
+        .flip-card-back::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.07);
+        }
+        .flip-card-back::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        /* Active glow on front when being flipped */
+        .flip-card.is-active .flip-card-front {
+            border-color: rgba(255, 85, 35, 0.3);
+            box-shadow: 0 0 30px rgba(255, 85, 35, 0.1);
+        }
+        .flip-card.is-active .flip-card-front .front-step-num {
+            background: var(--base-color, #ff5523);
+            color: #fff;
+            transform: scale(1.1);
+        }
+        /* Connector */
+        .process-connector {
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            width: 50px;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, rgba(255,85,35,0.3) 0px, rgba(255,85,35,0.3) 6px, transparent 6px, transparent 12px);
+            z-index: 2;
+        }
+        @media (max-width: 991px) { .process-connector { display: none; } }
+        /* Progress indicator */
+        .process-progress {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .process-progress-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .process-progress-dot.active {
+            background: var(--base-color, #ff5523);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(255, 85, 35, 0.4);
+        }
+        /* CTA strip */
+        .process-bottom-strip {
+            background: var(--base-color, #ff5523);
+            border-radius: 16px;
+            padding: 35px 45px;
+            color: #fff;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .process-bottom-strip::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+        .process-bottom-strip::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        @media (max-width: 767px) {
+            .flip-card { height: 340px; }
+            .flip-card-front { padding: 30px 20px; }
+            .flip-card-back { padding: 30px 25px; }
+            .process-bottom-strip { padding: 25px 20px; }
+        }
+    </style>
+    <section class="process-section pt-0 pb-0 ps-6 pe-6 xl-ps-3 xl-pe-3 md-ps-0 md-pe-0" id="creative-process">
+        <div class="container position-relative z-index-1">
+            <!-- section header -->
+            <div class="row justify-content-center mb-6 md-mb-50px"
+                data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                <div class="col-xl-7 col-lg-9 text-center">
+                    <span class="fs-14 lh-26 fw-600 text-uppercase text-white bg-base-color border-radius-30px ps-20px pe-20px pt-5px pb-5px mb-25px d-inline-block">How We Work</span>
+                    <h2 class="fw-500 text-dark-gray ls-minus-1px mb-15px">Our creative <span class="highlight-separator pb-0" data-shadow-animation="true" data-animation-delay="1500">process.<span><img src="images/highlight-separator-03.svg" alt="process highlight"></span></span></h2>
+                    <p class="w-75 mx-auto lg-w-90 sm-w-100 mb-0">From the first spark of an idea to measurable results — here's how we turn your vision into a brand that stands out in Kolkata and beyond.</p>
+                </div>
+            </div>
+            <!-- flip cards row -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center g-4 mb-2"
+                data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                <!-- Step 1 -->
+                <div class="col position-relative">
+                    <div class="flip-card" data-step="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="front-step-num">01</div>
+                                <div class="front-icon"><i class="bi bi-search"></i></div>
+                                <h3>Discovery</h3>
+
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-step-num">01</div>
+                                <h3>Discovery</h3>
+                                <p>We dive deep into your brand, audience, and goals — understanding what makes you unique before designing a single pixel.</p>
+                                <span class="back-tag">Research & Audit</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 pe-7 pt-7 pb-7 md-pt-0 md-ps-4 md-pe-4 sm-ps-0 sm-pe-0 sm-pb-50px">
-                        <div class="tab-content">
-                            
-                            <div class="tab-pane interactive-banner-style-01 fade in active show" id="tab_four1">
-                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
-                                    <img class="w-100" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instagram Growth Strategy - Social Media Success" />
-                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
-                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
-                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
-                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                                            <a href="javascript:void(0)" class="text-white d-block mt-auto text-decoration-line-bottom">Discover Case Study</a>
-                                        </div>
-                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
-                                    </figcaption>                            
-                                </figure>
+                    <div class="process-connector d-none d-lg-block"></div>
+                </div>
+                <!-- Step 2 -->
+                <div class="col position-relative">
+                    <div class="flip-card" data-step="1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="front-step-num">02</div>
+                                <div class="front-icon"><i class="bi bi-lightbulb"></i></div>
+                                <h3>Strategy</h3>
+
                             </div>
-                          
-                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four2">
-                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
-                                    <img class="w-100" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LinkedIn Lead Generation Campaign" />
-                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
-                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
-                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
-                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                                            <a href="javascript:void(0)" class="text-white d-block mt-auto text-decoration-line-bottom">Discover Case Study</a>
-                                        </div>
-                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
-                                    </figcaption>                            
-                                </figure>
+                            <div class="flip-card-back">
+                                <div class="back-step-num">02</div>
+                                <h3>Strategy</h3>
+                                <p>We craft a tailored roadmap — blending creativity with data to position your brand for maximum visibility and impact.</p>
+                                <span class="back-tag">Plan & Blueprint</span>
                             </div>
-                          
-                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four3">
-                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
-                                    <img class="w-100" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facebook Ad Performance Analytics" />
-                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
-                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
-                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
-                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                                            <a href="javascript:void(0)" class="text-white d-block mt-auto text-decoration-line-bottom">Discover Case Study</a>
-                                        </div>
-                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
-                                    </figcaption>                            
-                                </figure>
+                        </div>
+                    </div>
+                    <div class="process-connector d-none d-lg-block"></div>
+                </div>
+                <!-- Step 3 -->
+                <div class="col position-relative">
+                    <div class="flip-card" data-step="2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="front-step-num">03</div>
+                                <div class="front-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                                <h3>Create & Launch</h3>
+
                             </div>
-                          
-                            <div class="tab-pane interactive-banner-style-01 fade in" id="tab_four4">
-                                <figure class="m-0 position-relative hover-box border-radius-15px overflow-hidden">
-                                    <img class="w-100" src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Social Media Content Strategy Session" />
-                                    <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-dark-transparent opacity-2"></div>
-                                    <figcaption class="w-100 h-100 d-flex flex-column align-items-center p-40px">
-                                        <div class="position-relative d-flex flex-column h-100 z-index-1">
-                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center mx-auto mt-auto icon-box w-90px h-90px rounded-circle bg-white box-shadow-quadruple-large"><i class="bi bi-arrow-right-short text-dark-gray icon-medium lh-0px"></i></a>
-                                            <a href="javascript:void(0)" class="text-white d-block mt-auto text-decoration-line-bottom">Discover Case Study</a>
-                                        </div>
-                                        <div class="box-overlay bg-gradient-black-bottom-transparent"></div>
-                                    </figcaption>                            
-                                </figure>
+                            <div class="flip-card-back">
+                                <div class="back-step-num">03</div>
+                                <h3>Create & Launch</h3>
+                                <p>Designs come alive, campaigns go live, and your brand starts turning heads — across digital and offline touchpoints.</p>
+                                <span class="back-tag">Design & Deploy</span>
                             </div>
-                           
+                        </div>
+                    </div>
+                    <div class="process-connector d-none d-lg-block"></div>
+                </div>
+                <!-- Step 4 -->
+                <div class="col">
+                    <div class="flip-card" data-step="3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="front-step-num">04</div>
+                                <div class="front-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                <h3>Measure & Grow</h3>
+
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-step-num">04</div>
+                                <h3>Measure & Grow</h3>
+                                <p>We track, analyse, and optimise every campaign — ensuring continuous growth and a strong return on your investment.</p>
+                                <span class="back-tag">Optimise & Scale</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <!-- progress dots -->
+            <div class="process-progress" id="processProgress">
+                <div class="process-progress-dot active" data-dot="0"></div>
+                <div class="process-progress-dot" data-dot="1"></div>
+                <div class="process-progress-dot" data-dot="2"></div>
+                <div class="process-progress-dot" data-dot="3"></div>
+            </div>
+            <!-- bottom CTA strip -->
+            <div class="row"
+                data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 600, "easing": "easeOutQuad" }'>
+                <div class="col-12">
+                    <div class="process-bottom-strip d-flex flex-wrap align-items-center justify-content-between position-relative z-index-1">
+                        <div class="me-4 mb-3 mb-lg-0">
+                            <span class="fs-22 fw-600 d-block mb-5px">Ready to start your brand journey?</span>
+                            <p class="mb-0 opacity-8 fs-16">Let's collaborate and build something extraordinary together.</p>
+                        </div>
+                        <a href="tel:9230986042"
+                            class="btn btn-white btn-box-shadow fw-600 btn-large btn-rounded text-dark-gray right-icon btn-switch-text"
+                            aria-label="contact link">
+                            <span>
+                                <span class="btn-double-text" data-text="Let's Talk">Let's Talk</span>
+                                <span><i class="feather icon-feather-arrow-right"></i></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    (function() {
+        const section = document.getElementById('creative-process');
+        if (!section) return;
+        const cards = section.querySelectorAll('.flip-card');
+        const dots = section.querySelectorAll('.process-progress-dot');
+        let currentStep = -1;
+        let flipTimer = null;
+        let isVisible = false;
+
+        function flipToStep(step) {
+            // Unflip previous card after a delay
+            if (currentStep >= 0 && currentStep < cards.length) {
+                cards[currentStep].querySelector('.flip-card-inner').classList.remove('is-flipped');
+                cards[currentStep].classList.remove('is-active');
+            }
+            currentStep = step;
+            // Apply active glow briefly then flip
+            cards[currentStep].classList.add('is-active');
+            setTimeout(function() {
+                cards[currentStep].querySelector('.flip-card-inner').classList.add('is-flipped');
+            }, 200);
+            // Update dots
+            dots.forEach(function(d, i) {
+                d.classList.toggle('active', i === currentStep);
+            });
+        }
+
+        function nextFlip() {
+            var next = (currentStep + 1) % cards.length;
+            flipToStep(next);
+            // Schedule unflip after 2s, then next flip after 1s gap
+            flipTimer = setTimeout(function() {
+                cards[currentStep].querySelector('.flip-card-inner').classList.remove('is-flipped');
+                cards[currentStep].classList.remove('is-active');
+                flipTimer = setTimeout(function() {
+                    if (isVisible) nextFlip();
+                }, 800);
+            }, 2200);
+        }
+
+        function startAnimation() {
+            if (flipTimer) return;
+            isVisible = true;
+            // Small initial delay before starting
+            flipTimer = setTimeout(function() {
+                nextFlip();
+            }, 600);
+        }
+
+        function stopAnimation() {
+            isVisible = false;
+            if (flipTimer) {
+                clearTimeout(flipTimer);
+                flipTimer = null;
+            }
+            // Reset all cards
+            cards.forEach(function(c) {
+                c.querySelector('.flip-card-inner').classList.remove('is-flipped');
+                c.classList.remove('is-active');
+            });
+            currentStep = -1;
+            dots.forEach(function(d, i) { d.classList.toggle('active', i === 0); });
+        }
+
+        // Click on dots to jump to step
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                if (flipTimer) { clearTimeout(flipTimer); flipTimer = null; }
+                var step = parseInt(this.getAttribute('data-dot'));
+                // Reset all
+                cards.forEach(function(c) {
+                    c.querySelector('.flip-card-inner').classList.remove('is-flipped');
+                    c.classList.remove('is-active');
+                });
+                currentStep = step - 1;
+                nextFlip();
+            });
+        });
+
+        // Manual hover: flip on hover, resume auto after
+        cards.forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                if (flipTimer) { clearTimeout(flipTimer); flipTimer = null; }
+                // Reset all
+                cards.forEach(function(c) {
+                    c.querySelector('.flip-card-inner').classList.remove('is-flipped');
+                    c.classList.remove('is-active');
+                });
+                card.querySelector('.flip-card-inner').classList.add('is-flipped');
+                card.classList.add('is-active');
+                var idx = parseInt(card.getAttribute('data-step'));
+                dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+                currentStep = idx;
+            });
+            card.addEventListener('mouseleave', function() {
+                card.querySelector('.flip-card-inner').classList.remove('is-flipped');
+                card.classList.remove('is-active');
+                // Resume auto-flip from next card
+                flipTimer = setTimeout(function() {
+                    if (isVisible) nextFlip();
+                }, 1000);
+            });
+        });
+
+        // IntersectionObserver to start/stop based on visibility
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        startAnimation();
+                    } else {
+                        stopAnimation();
+                    }
+                });
+            }, { threshold: 0.25 });
+            observer.observe(section);
+        } else {
+            startAnimation();
+        }
+    })();
+    </script>
+    <!-- end creative process section -->
     <!-- end section -->
     <!-- start section -->
     <section>
@@ -1344,163 +1745,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
     </section>
-    
-   
 
-
-
-    <section class="pb-0">
-            <div class="container">
-                <div class="row justify-content-center mb-30px">
-                    <div class="col-lg-7 col-md-10 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block">Recognition & Awards</div>
-                        <h2 class="fw-500 text-dark-gray">We're achieving <span class="highlight-separator pb-0" data-shadow-animation="true" data-animation-delay="1500">Recognition & Awards.<span><img src="images/highlight-separator-05.svg" alt="separator"></span></span></h2>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-11" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row text-dark-gray border-bottom border-2 border-color-dark-gray g-0 xs-pb-20px">
-                            <div class="col-12 col-sm text-center pt-25px pb-25px xs-pt-0 xs-pb-0">
-                                <span class="fw-500">Year</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start"> 
-                                <span class="fw-500">Recognition</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="fw-500">Platform</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="fw-500">Project</span>
-                            </div>
-                            <div class="col-12 col-sm-1 align-self-center text-center text-md-start">
-
-                            </div>
-                        </div>
-                     
-                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
-                            <span class="reveal-overlay bg-dark-gray"></span>
-                            <div class="col-12 col-sm text-center align-self-center">
-                                <span class="reveal-title">2025</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Honors</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Awwwards</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Cropo Identity</span>
-                            </div>
-                            <div class="col-12 col-sm-1 text-center align-self-center">
-                                <a class="reveal-action" href="javascript:void(0)"><i class="feather icon-feather-arrow-up-right"></i></a>
-                            </div>
-                            <div class="hover-reveal no-transition d-none d-xl-block">
-                                <div class="hover-reveal__inner">
-                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="Award 2025" class="border-radius-15px" /></div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
-                            <span class="reveal-overlay bg-dark-gray"></span>
-                            <div class="col-12 col-sm text-center align-self-center">
-                                <span class="reveal-title">2025</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Site of the Month</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">CSS Design Awards</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Violator Series</span>
-                            </div>
-                            <div class="col-12 col-sm-1 text-center align-self-center">
-                                <a class="reveal-action" href="javascript:void(0)"><i class="feather icon-feather-arrow-up-right"></i></a>
-                            </div>
-                            <div class="hover-reveal no-transition d-none d-xl-block">
-                                <div class="hover-reveal__inner">
-                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="Award Site of the Month" class="border-radius-15px" /></div>
-                                </div>
-                            </div>
-                        </div>
-                     
-                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
-                            <span class="reveal-overlay bg-dark-gray"></span>
-                            <div class="col-12 col-sm text-center align-self-center">
-                                <span class="reveal-title">2024</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Site of the Day</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">The Portfolio</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Harddot Stone</span>
-                            </div>
-                            <div class="col-12 col-sm-1 text-center align-self-center">
-                                <a class="reveal-action" href="javascript:void(0)"><i class="feather icon-feather-arrow-up-right"></i></a>
-                            </div>
-                            <div class="hover-reveal no-transition d-none d-xl-block">
-                                <div class="hover-reveal__inner">
-                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="Award Site of the Day" class="border-radius-15px" /></div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px border-bottom border-color-transparent-dark-very-light">
-                            <span class="reveal-overlay bg-dark-gray"></span>
-                            <div class="col-12 col-sm text-center align-self-center">
-                                <span class="reveal-title">2024</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Site of the day</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">One page love</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Tailoring inteo</span>
-                            </div>
-                            <div class="col-12 col-sm-1 text-center align-self-center">
-                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
-                            </div>
-                            <div class="hover-reveal no-transition d-none d-xl-block">
-                                <div class="hover-reveal__inner">
-                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="row services-box-style-09 reveal-item-hover position-relative align-items-center text-dark-gray g-0 pt-20px pb-20px xs-pb-0">
-                            <span class="reveal-overlay bg-dark-gray"></span>
-                            <div class="col-12 col-sm text-center align-self-center">
-                                <span class="reveal-title">2023</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">Mobile excellence</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">The portfolio</span>
-                            </div>
-                            <div class="col-12 col-sm align-self-center text-center text-md-start">
-                                <span class="reveal-title">CSS Awards</span>
-                            </div>
-                            <div class="col-12 col-sm-1 text-center align-self-center">
-                                <a class="reveal-action" href="#"><i class="feather icon-feather-arrow-up-right"></i></a>
-                            </div>
-                            <div class="hover-reveal no-transition d-none d-xl-block">
-                                <div class="hover-reveal__inner">
-                                    <div class="hover-reveal__img"><img src="https://placehold.co/200x283" alt="" class="border-radius-15px" /></div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
     <!-- <section class="position-relative overflow-hidden">
             <div class="container-fluid p-0">
@@ -1969,7 +2214,7 @@ jQuery('#frmSubmit2').on('submit', function(e){
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="myfont fw-300 ls-1px text-white">
-                        <span class="text-base-color">©</span> 2025
+                        <span class="text-base-color">©</span> 2026
                         Colourstreak </div>
 
                 </div>
