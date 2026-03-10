@@ -423,7 +423,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="index.html" class="nav-link"
                                     aria-label="link">Home</a></li>
-                            <li class="nav-item"><a href="#aboutsection" class="nav-link" aria-label="link">About</a>
+                            <li class="nav-item dropdowninclude" id="about-dropdown-li">
+                                <a href="about.html" class="nav-link dropdowntoggle" id="about-nav-link" aria-label="About Colourstreak">About
+                                    ▾</a>
+                                <div class="dropdownmenus" id="about-dropdown-menu" role="navigation" aria-label="About submenu">
+                                    <a href="about.html#vision" aria-label="Our Vision">Vision</a>
+                                    <a href="about.html#mission" aria-label="Our Mission">Mission</a>
+                                </div>
                             </li>
                             <li class="nav-item dropdowninclude">
                                 <a href="#servicesection" class="nav-link dropdowntoggle" aria-label="link">Services
@@ -2280,7 +2286,7 @@ jQuery('#frmSubmit2').on('submit', function(e){
                 <div class="col-xl-2 col-md-4 lg-mb-10px">
                     <ul>
                         <li>Quick Links</li>
-                        <li><a href="#aboutsection">About</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="#servicesection">Service</a></li>
                         <li><a href="#clientsection">Clients</a></li>
                         <li><a href="#contactus">Contacts</a></li>
