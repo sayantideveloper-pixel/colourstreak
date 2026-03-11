@@ -481,10 +481,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row align-items-center justify-content-center">
                 <div class="col-xxl-4 col-xl-5 col-lg-8 text-center text-xl-start"
                     data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [100, 0], "staggervalue": 300, "duration": 1200, "easing": "easeOutCubic" }'>
-                    <h1 class="text-dark-gray ls-minus-3px mb-50px sm-mb-30px">Colourstreak | Top Digital Marketing & Graphic Design Agency in Kolkata.</h1>
+                    <h1 class="text-dark-gray ls-minus-3px mb-50px sm-mb-30px">Colourstreak | <br class="d-md-none">Top Digital Marketing & Graphic Design Agency in Kolkata.</h1>
                     <div
                         class="d-flex align-items-center justify-content-center justify-content-xl-start flex-sm-row flex-column">
-                        <a href="tel:9230986042"
+                        <a href="tel:9230986041"
                             class="btn btn-large btn-dark-gray btn-box-shadow btn-rounded btn-switch-text left-icon xs-mb-30px">
                             <span>
                                 <span>
@@ -527,26 +527,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 it.</span>
                         </div>
                     </div>
-                    <div class="border-radius-15px bg-white w-300px sm-w-100 bg-white box-shadow-extra-large">
-                        <div class="d-flex align-items-center ps-25px pe-25px pt-20px pb-20px">
-                            <div>
-                                <span class="d-block lh-18">Trusted by</span>
-                                <span class="fs-18 fw-500 text-dark-gray d-block">Client review</span>
+                        <a href="https://www.google.com/maps?cid=14346323181741459406" target="_blank" class="border-radius-15px bg-white w-300px sm-w-100 bg-white box-shadow-extra-large d-block">
+                            <div class="d-flex align-items-center ps-25px pe-25px pt-20px pb-20px">
+                                <div>
+                                    <span class="d-block lh-18 text-black">Trusted by</span>
+                                    <span class="fs-18 fw-500 text-dark-gray d-block">Client review</span>
+                                </div>
+                                <div
+                                    class="border-radius-30px text-white bg-base-color ps-15px pe-15px pt-2px pb-2px fs-18 lh-32 fw-500 ls-minus-1px d-inline-flex align-items-center ms-auto">
+                                    <i class="bi bi-star-fill fs-14 me-5px"></i><span class="flex-shrink-0">4.8</span>
+                                </div>
                             </div>
                             <div
-                                class="border-radius-30px text-white bg-base-color ps-15px pe-15px pt-2px pb-2px fs-18 lh-32 fw-500 ls-minus-1px d-inline-flex align-items-center ms-auto">
-                                <i class="bi bi-star-fill fs-14 me-5px"></i><span class="flex-shrink-0">4.8</span>
+                                class="d-flex align-items-center pt-10px pb-10px ps-5px pe-5px border-top border-color-transparent-dark-very-light">
+                                <img src="newimg/webpimg/indian_clients_170x90.webp" alt="clients picture">
+                                <div class="ms-5px">
+                                    <h5 class="fw-700 text-dark-gray mb-0">10K<sup>+</sup></h5>
+                                    <div class="fs-14 lh-16 text-dark-gray">Happy clients</div>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="d-flex align-items-center pt-10px pb-10px ps-5px pe-5px border-top border-color-transparent-dark-very-light">
-                            <img src="newimg/webpimg/indian_clients_170x90.webp" alt="clients picture">
-                            <div class="ms-5px">
-                                <h5 class="fw-700 text-dark-gray mb-0">10K<sup>+</sup></h5>
-                                <div class="fs-14 lh-16 text-dark-gray">Happy clients</div>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
                 </div>
             </div>
         </div>
@@ -1047,7 +1047,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col-12 text-center"
                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <span class="fs-20 text-dark-gray">Partner with the best digital marketing agency in Kolkata. <a
-                            href="tel:9230986042"
+                            href="tel:9230986041"
                             class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom border-2 border-color-dark-gray fw-500">Got
                             a project in mind?</a></span>
                 </div>
@@ -1296,6 +1296,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             .flip-card-back { padding: 30px 25px; }
             .process-bottom-strip { padding: 25px 20px; }
         }
+        @media (max-width: 767px) {
+            .flip-card-front .front-step-num {
+                display: none;
+            }
+            .flip-card-front .front-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 15px;
+            }
+            .flip-card-front .front-icon i {
+                font-size: 24px;
+            }
+            /* Ensure text fits if needed */
+            .flip-card-front h3 {
+                font-size: 18px;
+            }
+            /* Stats 2x2 grid borders */
+            .row-cols-2 > .col:nth-child(2n) {
+                border-right: none !important;
+            }
+            .row-cols-2 > .col:nth-child(n+3) {
+                border-bottom: none !important;
+            }
+            .clients-style-05 .client-box img {
+                height: 20px !important;
+            }
+            /* Swiper Carousel for process cards on mobile */
+            .process-swiper {
+                padding-bottom: 40px !important;
+                overflow: visible !important; /* Allow cards to peek out */
+            }
+            .flip-card {
+                height: 260px !important; /* Balanced height */
+            }
+            .flip-card-inner {
+                transform: rotateY(180deg) !important;
+                transition: none !important;
+            }
+            .flip-card-back {
+                padding: 25px 20px !important;
+                text-align: center !important;
+                align-items: center !important;
+                border-radius: 18px;
+            }
+            .flip-card-back h3 {
+                font-size: 19px !important;
+                margin-bottom: 10px !important;
+            }
+            .flip-card-back p {
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0 !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .flip-card-back .back-step-num,
+            .flip-card-back .back-tag,
+            .process-progress,
+            .process-connector {
+                display: none !important;
+            }
+        }
     </style>
     <section class="process-section pt-0 pb-0 ps-6 pe-6 xl-ps-3 xl-pe-3 md-ps-0 md-pe-0" id="creative-process">
         <div class="container position-relative z-index-1">
@@ -1308,84 +1373,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="w-75 mx-auto lg-w-90 sm-w-100 mb-0">From the first spark of an idea to measurable results — here's how we turn your vision into a brand that stands out in Kolkata and beyond.</p>
                 </div>
             </div>
-            <!-- flip cards row -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center g-4 mb-2"
-                data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                <!-- Step 1 -->
-                <div class="col position-relative">
-                    <div class="flip-card" data-step="0">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="front-step-num">01</div>
-                                <div class="front-icon"><i class="bi bi-search"></i></div>
-                                <h3>Discovery</h3>
-
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="back-step-num">01</div>
-                                <h3>Discovery</h3>
-                                <p>We dive deep into your brand, audience, and goals — understanding what makes you unique before designing a single pixel.</p>
-                                <span class="back-tag">Research & Audit</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="process-connector d-none d-lg-block"></div>
-                </div>
-                <!-- Step 2 -->
-                <div class="col position-relative">
-                    <div class="flip-card" data-step="1">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="front-step-num">02</div>
-                                <div class="front-icon"><i class="bi bi-lightbulb"></i></div>
-                                <h3>Strategy</h3>
-
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="back-step-num">02</div>
-                                <h3>Strategy</h3>
-                                <p>We craft a tailored roadmap — blending creativity with data to position your brand for maximum visibility and impact.</p>
-                                <span class="back-tag">Plan & Blueprint</span>
+            <!-- flip cards swiper -->
+            <div class="swiper process-swiper md-ps-15px md-pe-15px" 
+                data-slider-options='{ "slidesPerView": 1, "spaceBetween": 20, "loop": true, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "576": { "slidesPerView": 1.2 }, "768": { "slidesPerView": 2 }, "992": { "slidesPerView": 3 }, "1200": { "slidesPerView": 4, "loop": false, "autoplay": false, "allowTouchMove": false } } }'>
+                <div class="swiper-wrapper">
+                    <!-- Step 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="flip-card" data-step="0">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="front-step-num">01</div>
+                                    <div class="front-icon"><i class="bi bi-search"></i></div>
+                                    <h3>Discovery</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="back-step-num">01</div>
+                                    <h3>Discovery</h3>
+                                    <p>We dive deep into your brand, audience, and goals — understanding what makes you unique before designing a single pixel.</p>
+                                    <span class="back-tag">Research & Audit</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="process-connector d-none d-lg-block"></div>
-                </div>
-                <!-- Step 3 -->
-                <div class="col position-relative">
-                    <div class="flip-card" data-step="2">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="front-step-num">03</div>
-                                <div class="front-icon"><i class="bi bi-rocket-takeoff"></i></div>
-                                <h3>Create & Launch</h3>
-
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="back-step-num">03</div>
-                                <h3>Create & Launch</h3>
-                                <p>Designs come alive, campaigns go live, and your brand starts turning heads — across digital and offline touchpoints.</p>
-                                <span class="back-tag">Design & Deploy</span>
+                    <!-- Step 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="flip-card" data-step="1">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="front-step-num">02</div>
+                                    <div class="front-icon"><i class="bi bi-lightbulb"></i></div>
+                                    <h3>Strategy</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="back-step-num">02</div>
+                                    <h3>Strategy</h3>
+                                    <p>We craft a tailored roadmap — blending creativity with data to position your brand for maximum visibility and impact.</p>
+                                    <span class="back-tag">Plan & Blueprint</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="process-connector d-none d-lg-block"></div>
-                </div>
-                <!-- Step 4 -->
-                <div class="col">
-                    <div class="flip-card" data-step="3">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="front-step-num">04</div>
-                                <div class="front-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                                <h3>Measure & Grow</h3>
-
+                    <!-- Step 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="flip-card" data-step="2">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="front-step-num">03</div>
+                                    <div class="front-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                                    <h3>Create & Launch</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="back-step-num">03</div>
+                                    <h3>Create & Launch</h3>
+                                    <p>Designs come alive, campaigns go live, and your brand starts turning heads — across digital and offline touchpoints.</p>
+                                    <span class="back-tag">Design & Deploy</span>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <div class="back-step-num">04</div>
-                                <h3>Measure & Grow</h3>
-                                <p>We track, analyse, and optimise every campaign — ensuring continuous growth and a strong return on your investment.</p>
-                                <span class="back-tag">Optimise & Scale</span>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="flip-card" data-step="3">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="front-step-num">04</div>
+                                    <div class="front-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <h3>Measure & Grow</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="back-step-num">04</div>
+                                    <h3>Measure & Grow</h3>
+                                    <p>We track, analyse, and optimise every campaign — ensuring continuous growth and a strong return on your investment.</p>
+                                    <span class="back-tag">Optimise & Scale</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1407,7 +1467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <span class="fs-22 fw-600 d-block mb-5px">Ready to start your brand journey?</span>
                             <p class="mb-0 opacity-8 fs-16">Let's collaborate and build something extraordinary together.</p>
                         </div>
-                        <a href="tel:9230986042"
+                        <a href="https://wa.me/919230986041"
                             class="btn btn-white btn-box-shadow fw-600 btn-large btn-rounded text-dark-gray right-icon btn-switch-text"
                             aria-label="contact link">
                             <span>
@@ -1552,22 +1612,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2 class="fs-65 fw-500 text-dark-gray">Helping brands grow through smart digital marketing in Kolkata.</h2>
                     </div>
                 </div>
-                <div class="row border-top border-bottom border-color-transparent-dark-very-light row-cols-1 row-cols-lg-3">
-                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin border-end md-border-end-0 md-border-bottom border-color-transparent-dark-very-light">
-                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">2X</h2>
-                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Boosting Revenue Growth</span>
-                        <p>Empowering businesses by boosting consistent revenue growth through strategic SEO.</p>
+                <div class="row border-top border-bottom border-color-transparent-dark-very-light row-cols-2 row-cols-lg-4 justify-content-center">
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-20px last-paragraph-no-margin border-end border-color-transparent-dark-very-light">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">2X</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray sm-fs-16">Boosting Revenue Growth</span>
+                        <p class="sm-fs-12">Empowering businesses by boosting revenue growth through strategic SEO.</p>
                     </div>
-                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin border-end md-border-end-0 md-border-bottom border-color-transparent-dark-very-light position-relative">
-                        <span class="position-absolute top-25px right-25px bg-base-color border-radius-18px text-white fs-11 lh-24 fw-600 text-uppercase ps-15px pe-15px">Hot</span>
-                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">85%</h2>
-                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Empowering Startup Success</span>
-                        <p>We help startups turn bold ideas into scalable and market success stories.</p>
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-20px last-paragraph-no-margin border-end border-color-transparent-dark-very-light position-relative">
+                        <span class="position-absolute top-10px right-10px bg-base-color border-radius-18px text-white fs-11 lh-24 fw-600 text-uppercase ps-10px pe-10px d-none d-md-block">Hot</span>
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">85%</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray sm-fs-16">Empowering Startup Success</span>
+                        <p class="sm-fs-12">We help startups turn bold ideas into scalable and market success stories.</p>
                     </div>
-                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-30px last-paragraph-no-margin">
-                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px">25+</h2>
-                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray">Winning Formula for Brands</span>
-                        <p>Empowering early-stage businesses with professional tools that drive real success.</p>
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-20px last-paragraph-no-margin border-end border-color-transparent-dark-very-light">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">25+</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray sm-fs-16">Winning Formula for Brands</span>
+                        <p class="sm-fs-12">Empowering early-stage businesses with tools that drive real success.</p>
+                    </div>
+                    <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-20px last-paragraph-no-margin border-color-transparent-dark-very-light">
+                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">1000+</h2>
+                        <span class="fs-20 fw-500 d-block mb-5px text-dark-gray sm-fs-16">Projects Delivered</span>
+                        <p class="sm-fs-12">Delivering high-quality creative solutions for diverse clients globally.</p>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-center mt-6 sm-mt-50px">
@@ -1575,7 +1640,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <span class="fs-18 text-dark-gray">Trusted by top brands</span>
                     </div>
                     <div class="col-12 col-xl-7 col-lg-9">
-                        <div class="row row-cols-1 row-cols-md-4 text-center justify-content-center clients-style-05">
+                        <div class="row row-cols-4 row-cols-md-4 text-center justify-content-center clients-style-05">
                            
                             <div class="col sm-mb-40px">
                                 <div class="client-box">
@@ -1893,14 +1958,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         Where Design Meets Digital Impact.</h2>
                     <p
                         data-anime='{"el": "lines", "translateY": [30, 0], "perspective": [400,400], "scale": [1.1, 1], "rotateX": [-80, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        As the best digital marketing agency in Kolkata, we bring brands to life with design-led thinking and creative solutions that drive real digital transformation.</p>
+                        Colourstreak is a creative and marketing solutions company based in Kolkata, India, specializing in graphic design, digital marketing, website development, signage, and digital printing services. We help businesses build strong brand identities and grow their presence across both digital and physical platforms. With a team of creative designers, marketers, and technical experts, we combine creative thinking, strategic planning, and modern technology to deliver impactful solutions for our clients. From developing compelling brand visuals to building functional websites and executing effective marketing campaigns, we focus on creating work that drives real business results.</p>
                     <div class="mt-auto"
                         data-anime='{"translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 800, "staggervalue": 300, "bounce": "easeOutQuad" }'>
-                        <img class="mb-5px w-70" src="images/logo-awwards.svg" alt="Awwwards Recognition for Creative Excellence">
-
-
-
-                        <p class="mb-0"><span class="text-dark-gray">Awards</span> - Site of the day 2025</p>
+                        <a href="about.html" class="btn btn-dark-gray btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text mt-auto" aria-label="About Colourstreak">
+                            <span>
+                                <span class="btn-double-text" data-text="View More">View More</span>
+                                <span><i class="feather icon-feather-arrow-right"></i></span>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xl-2 col-md-4 offset-xl-1 sm-mb-30px"
@@ -2299,7 +2365,7 @@ jQuery('#frmSubmit2').on('submit', function(e){
                     <ul>
                         <li>Get In Touch</li>
                         <li><a href="mailto:connect@colourstreak.com">connect@colourstreak.com</a></li>
-                        <li><a href="tel:9230986042">+91 92309 86041</a></li>
+                        <li><a href="tel:919230986041">+91 92309 86041</a></li>
                     </ul>
                 </div>
                 <!-- end footer menu -->
