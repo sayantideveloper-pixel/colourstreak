@@ -115,7 +115,16 @@
         /* =============================================
            ABOUT PAGE — CUSTOM STYLES
            ============================================= */
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        html::-webkit-scrollbar {
+            display: none; /* Chrome/Safari/Webkit */
+        }
+
 
         /* ---- Navbar Dropdown (shared with index.html) ---- */
         .dropdowninclude {
@@ -189,7 +198,7 @@
         /* ---- FULL-BLEED IMAGE HERO (like reference) ---- */
         .about-hero-v2 {
             position: relative;
-            min-height: 92vh;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -225,7 +234,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 120px 80px 100px;
+            padding: 80px 80px 60px;
             gap: 40px;
         }
         /* Left — text block */
@@ -262,6 +271,7 @@
             line-height: 1.07;
             letter-spacing: -2px;
             margin-bottom: 22px;
+            text-transform: capitalize;
         }
         .hero-v2-left h1 em {
             font-style: normal;
@@ -986,7 +996,11 @@
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b"
-    class="overflow-x-hidden custom-cursor">
+    class="overflow-x-hidden custom-cursor" style="overflow-x: hidden; scrollbar-width: none; -ms-overflow-style: none;">
+    <style>
+        body::-webkit-scrollbar { display: none; }
+    </style>
+
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8KPQLWD"
@@ -1047,6 +1061,7 @@
                             </li>
 
                             <li class="nav-item"><a href="index.html#clientsection" class="nav-link" aria-label="link">Clients</a></li>
+                            <li class="nav-item"><a href="career.html" class="nav-link" aria-label="link">Career</a></li>
                             <li class="nav-item"><a href="index.html#contactus" class="nav-link" aria-label="link">Contact</a></li>
                         </ul>
                     </div>
@@ -1089,7 +1104,7 @@
                         <span class="hero-v2-tag-dot"></span>
                         Creative Agency &bull; Kolkata
                     </span>
-                    <h1>Design with<br><em>Bold Purpose.</em><br>Build with <em>Colour.</em></h1>
+                    <h1>About us</h1>
                     <p class="hero-v2-desc">From concept to creation, we craft brand experiences that feel alive and drive real results for businesses across India.</p>
                     <a href="#aboutsection" class="hero-v2-cta" aria-label="Learn about Colourstreak">
                         Discover Our Story
