@@ -221,6 +221,36 @@
         .custom-cursor .circle-cursor-inner{background-color:#FF6036!important;}
         .custom-cursor .circle-cursor-outer{border-color:#FF6036!important;}
     }
+    /* --- TOAST NOTIFICATION --- */
+    #successToast {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 16px;
+        position: fixed;
+        z-index: 10000;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-left: 4px solid var(--c-orange);
+    }
+    #successToast.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @-webkit-keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+    @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+    @-webkit-keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
     </style>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8KPQLWD');</script>
 </head>
@@ -369,7 +399,7 @@
                     <p class="info-address">📍 140, Aurobindo Sarani, Ground Floor,<br>Shantiniketan Apartment, Kolkata,<br>West Bengal 700006</p>
                 </div>
                 <div class="form-panel" id="formPanel">
-                    <form id="careerForm" class="form-grid" action="https://formsubmit.co/65bbd24a4a907572d20d54d6bbea2b4a" method="POST" enctype="multipart/form-data">
+                    <form id="careerForm" class="form-grid" action="https://formsubmit.co/ajax/hr@colourstreak.com" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_subject" value="New Career Application — Colourstreak">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="form-group"><input type="text" name="name" placeholder=" " required id="fname"><label for="fname">Full Name</label></div>
@@ -403,6 +433,7 @@
                         <div class="form-group full"><textarea name="message" rows="4" placeholder=" " id="fmessage"></textarea><label for="fmessage">Message / Cover Note</label></div>
                         <button type="submit" class="submit-btn">Send My Application →</button>
                     </form>
+                    <div id="successToast"><i class="feather icon-feather-check-circle" style="color:var(--c-orange);font-size:1.2rem;"></i> Application Submitted Successfully!</div>
                     <p class="form-note">Or reach us directly — <a href="mailto:hr@colourstreak.com">hr@colourstreak.com</a></p>
                 </div>
             </div>
@@ -700,6 +731,45 @@
             });
         }
     })();
+
+    /*  CAREER FORM AJAX SUBMISSION  */
+    const careerForm = document.getElementById('careerForm');
+    if (careerForm) {
+        careerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = careerForm.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            const formData = new FormData(careerForm);
+            
+            fetch(careerForm.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.success === true) {
+                    careerForm.reset();
+                    const toast = document.getElementById('successToast');
+                    toast.classList.add('show');
+                    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
+        });
+    }
     </script>
 </body>
 </html>
