@@ -53,10 +53,11 @@
         --c-card2:#f9f6f3;
         --c-text:#626262;
         --c-white:#ffffff;
-        --poly-btn:polygon(0 0,96% 0,100% 50%,96% 100%,0 100%);
+        --poly-btn:none;
         --poly-card:polygon(0 0,95% 0,100% 8%,100% 100%,5% 100%,0 92%);
-        --poly-job:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%);
-        --poly-pill:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+        --poly-job:none;
+        --poly-pill:none;
+        --btn-radius: 50px;
     }
     *{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
@@ -96,11 +97,11 @@
     .career-hero h1{font-size:clamp(3rem,6vw,5.5rem);font-weight:900;line-height:1;margin-bottom:28px;letter-spacing:-2px;color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);}
     .hero-sub{font-size:1.15rem;line-height:1.7;color:rgba(255,255,255,0.95);margin-bottom:44px;max-width:540px;text-shadow: 0 1px 4px rgba(0,0,0,0.2);}
     .hero-btns{display:flex;gap:16px;}
-    .btn-poly{padding:18px 36px;font-family:var(--primary-font);font-size:.9rem;font-weight:800;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;justify-content:center;clip-path:var(--poly-btn);border: 2px solid transparent;}
-    .btn-poly-fill{background:var(--c-orange);color:var(--c-white);box-shadow:0 10px 30px rgba(255,107,0,0.4); border-color: var(--c-orange);}
+    .btn-poly{padding:13px 36px;font-family:var(--primary-font);font-size:.9rem;font-weight:800;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--btn-radius);border: 2px solid transparent;}
+    .btn-poly-fill{background:var(--c-dark);color:var(--c-white);box-shadow:0 10px 30px rgba(0,0,0,0.2); border-color: var(--c-dark);}
     .btn-poly-ghost{background:rgba(255,255,255,0.1);color:#fff;border:2px solid rgba(255,255,255,0.8); backdrop-filter: blur(5px);}
     .btn-poly-ghost:hover{background: #fff; color: var(--c-orange); border-color: #fff;}
-    .btn-poly:hover{transform:scale(1.04);box-shadow:0 8px 30px rgba(255,107,0,.2);}
+    .btn-poly:hover{transform:scale(1.04);box-shadow:0 8px 30px rgba(0,0,0,.15);}
     .hero-stats-panel{clip-path:polygon(10% 0%,100% 0%,90% 100%,0% 100%);background:var(--c-white);box-shadow:0 20px 60px rgba(0,0,0,0.05);border-left:3px solid var(--c-orange);padding:48px 40px 48px 50px;display:flex;flex-direction:column;gap:28px;}
     .stat-block .stat-num{font-family:var(--primary-font);font-size:2.8rem;font-weight:800;color:var(--c-dark);line-height:1;}
     .stat-block .stat-lbl{font-size:.85rem;color:var(--c-text);margin-top:2px;}
@@ -134,10 +135,10 @@
     /* --- POSITIONS SECTION --- */
     .positions-section{background:var(--c-white);padding:100px 60px;}
     .filter-row{display:flex;gap:10px;justify-content:center;margin-bottom:48px;flex-wrap:wrap;}
-    .filter-pill{font-family:var(--primary-font);font-size:.85rem;font-weight:600;padding:10px 24px;cursor:pointer;border:2px solid rgba(0,0,0,.05);background:transparent;color:var(--c-text);clip-path:var(--poly-pill);transition:all .3s;}
+    .filter-pill{font-family:var(--primary-font);font-size:.85rem;font-weight:600;padding:5px 24px;cursor:pointer;border:2px solid rgba(0,0,0,.05);background:transparent;color:var(--c-text);border-radius:var(--btn-radius);transition:all .3s;}
     .filter-pill.active,.filter-pill:hover{background:var(--c-orange);color:var(--c-white);border-color:transparent;}
     .jobs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1400px;margin:0 auto;}
-    .job-card{clip-path:var(--poly-job);background:#fff;padding:32px 28px;position:relative;border:1px solid rgba(0,0,0,0.05);transition:border-color .3s,box-shadow .3s;}
+    .job-card{background:#fff;padding:32px 28px;position:relative;border:1px solid rgba(0,0,0,0.05);border-radius: 12px;transition:border-color .3s,box-shadow .3s;}
     .job-card:hover{border-color:var(--c-orange);box-shadow:0 15px 50px rgba(0,0,0,0.05);}
     .job-top{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
     .dept-pill{font-size:.7rem;font-weight:700;padding:4px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:1px;}
@@ -150,7 +151,7 @@
     .job-card .job-desc{font-size:.85rem;color:var(--c-text);opacity:0.8;font-style:italic;margin-bottom:20px;line-height:1.6;}
     .job-bottom{display:flex;align-items:center;justify-content:space-between;}
     .job-meta{font-size:.78rem;color:var(--c-text);opacity:0.5;}
-    .apply-btn{font-family:var(--primary-font);font-size:.8rem;font-weight:800;color:#fff;background:var(--c-orange);padding:10px 24px;clip-path:var(--poly-pill);cursor:pointer;transition:all .3s;text-decoration:none; border: 1px solid var(--c-orange); box-shadow: 0 4px 15px rgba(255,107,0,0.2);}
+    .apply-btn{font-family:var(--primary-font);font-size:.8rem;font-weight:800;color:#fff;background:var(--c-orange);padding:5px 24px;border-radius:var(--btn-radius);cursor:pointer;transition:all .3s;text-decoration:none; border: 1px solid var(--c-orange); box-shadow: 0 4px 15px rgba(255,107,0,0.2);}
     .apply-btn:hover{background:transparent; color:var(--c-orange); box-shadow: none;}
 
     /* --- FORM SECTION --- */
@@ -172,8 +173,9 @@
     .form-group label{position:absolute;top:12px;left:0;font-size:.85rem;color:rgba(0,0,0,.3);transition:all .3s;pointer-events:none;}
     .form-group input,.form-group select,.form-group textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(0,0,0,.08);padding:12px 0;font-family:var(--primary-font);font-size:.92rem;color:var(--c-dark);outline:none;transition:border-color .3s;}
     .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-bottom-color:var(--c-orange);}
-    .form-group input:focus~label,.form-group input:not(:placeholder-shown)~label,.form-group select:focus~label,.form-group textarea:focus~label,.form-group textarea:not(:placeholder-shown)~label{top:-10px;font-size:.7rem;color:var(--c-orange);}
-    .form-group select{appearance:none;cursor:pointer;}
+    .form-group input:focus~label,.form-group input:not(:placeholder-shown)~label,.form-group select~label,.form-group textarea:focus~label,.form-group textarea:not(:placeholder-shown)~label{top:-10px;font-size:.7rem;color:var(--c-orange);}
+    .form-group select{appearance:none;cursor:pointer;cursor:pointer;padding-right: 30px;}
+    .form-group select::after {content:'▾'; position:absolute; right:0; top:12px; pointer-events:none;}
     .form-group select option{background:#fff;color:#333;}
     .form-group textarea{resize:none;min-height:80px;}
     .upload-zone{grid-column:1/-1;clip-path:polygon(0 0,97% 0,100% 15%,100% 100%,3% 100%,0 85%);border:2px dashed rgba(255,107,0,.15);background:#fcfcfc;padding:36px;text-align:center;cursor:pointer;transition:all .3s;}
@@ -181,7 +183,7 @@
     .upload-zone i{font-size:2rem;color:var(--c-orange);display:block;margin-bottom:8px;}
     .upload-zone span{font-size:.85rem;color:var(--c-text);}
     .upload-zone input{display:none;}
-    .submit-btn{grid-column:1/-1;clip-path:polygon(0 0,98% 0,100% 30%,100% 70%,98% 100%,2% 100%,0 70%,0 30%);background:var(--c-orange);border:none;padding:18px;font-family:var(--primary-font);font-size:1rem;font-weight:700;color:var(--c-white);cursor:pointer;transition:transform .3s,box-shadow .3s;letter-spacing:1px;}
+    .submit-btn{grid-column:1/-1;background:var(--c-orange);border:none;padding:13px;font-family:var(--primary-font);font-size:1rem;font-weight:700;color:var(--c-white);cursor:pointer;transition:transform .3s,box-shadow .3s;letter-spacing:1px;border-radius:var(--btn-radius);}
     .submit-btn:hover{transform:scale(1.01);box-shadow:0 8px 30px rgba(255,107,0,.3);}
     .form-note{text-align:center;margin-top:24px;font-size:.82rem;color:var(--c-text);}
     .form-note a{color:var(--c-orange);text-decoration:none;}
@@ -371,7 +373,7 @@
                 </div>
             </div>
             <div class="culture-grid cards-wrapper">
-                <article class="culture-card card"><span class="card-num">01</span><span class="card-icon"><i class="feather icon-feather-edit-3"></i></span><h3>Creative Freedom</h3><p>Your ideas drive real brand stories. We believe in empowering every team member to think boldly and create fearlessly.</p></article>
+                <article class="culture-card card"><span class="card-num">01</span><span class="card-icon"><i class="feather icon-feather-edit"></i></span><h3>Creative Freedom</h3><p>Your ideas drive real brand stories. We believe in empowering every team member to think boldly and create fearlessly.</p></article>
                 <article class="culture-card card"><span class="card-num">02</span><span class="card-icon"><i class="feather icon-feather-trending-up"></i></span><h3>Growth Culture</h3><p>Learn, lead, and level up every quarter. We invest in your skills with workshops, mentoring, and real-world challenges.</p></article>
                 <article class="culture-card card"><span class="card-num">03</span><span class="card-icon"><i class="feather icon-feather-users"></i></span><h3>Collaborative Team</h3><p>A family of 50+ bold creative minds. We thrive on teamwork, open dialogue, and shared wins across every project.</p></article>
                 <article class="culture-card card"><span class="card-num">04</span><span class="card-icon"><i class="feather icon-feather-globe"></i></span><h3>Real Impact</h3><p>Work that reaches millions across India. Our campaigns and designs shape how brands connect with people every day.</p></article>
@@ -409,6 +411,7 @@
                         <div class="form-group">
                             <select name="position" required id="fposition">
                                 <option value="" disabled selected>Select what position you are applying for</option>
+                                <option>Teecom Services</option>
                                 <option>Graphic Designer</option>
                                 <option>Digital Marketing Executive</option>
                                 <option>Content Strategist</option>
@@ -453,6 +456,9 @@
                 <button class="filter-pill" data-filter="operations" role="tab">Operations</button>
             </div>
             <div class="jobs-grid" id="jobsGrid">
+                <div id="no-jobs-msg" style="display:none; grid-column:1/-1; text-align:center; padding:40px; background:var(--c-card2); border-radius:12px; border:1px dashed rgba(0,0,0,0.1);"><h3 style="margin:0; color:var(--c-text); font-weight:600;">we are Not hiring For this role Currently</h3></div>
+                <article class="job-card" data-dept="tech"><div class="job-top"><span class="dept-pill dept-tech">Tech</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Teecom Services</h3><p class="job-desc">Join our team to provide top-notch Teecom services. We are looking for dedicated professionals.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
+                <!--
                 <article class="job-card" data-dept="design"><div class="job-top"><span class="dept-pill dept-design">Design</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Graphic Designer</h3><p class="job-desc">Create bold visuals that speak louder than words.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
                 <article class="job-card" data-dept="marketing"><div class="job-top"><span class="dept-pill dept-marketing">Marketing</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Digital Marketing Executive</h3><p class="job-desc">Drive campaigns with measurable results.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
                 <article class="job-card" data-dept="marketing"><div class="job-top"><span class="dept-pill dept-marketing">Marketing</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Content Strategist</h3><p class="job-desc">Craft narratives that engage and convert.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
@@ -464,6 +470,7 @@
                 <article class="job-card" data-dept="design"><div class="job-top"><span class="dept-pill dept-design">Design</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Interior Design Consultant</h3><p class="job-desc">Design inspiring spaces for life and work.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
                 <article class="job-card" data-dept="operations"><div class="job-top"><span class="dept-pill dept-operations">Operations</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>HR & Talent Acquisition Manager</h3><p class="job-desc">Find and nurture the next generation of creative talent.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
                 <article class="job-card" data-dept="operations"><div class="job-top"><span class="dept-pill dept-operations">Operations</span><span class="loc-tag">📍 Kolkata, WB</span></div><h3>Project Coordinator</h3><p class="job-desc">Ensure seamless delivery across complex creative projects.</p><div class="job-bottom"><span class="job-meta">Full-Time · Kolkata, WB</span><a href="#apply" class="apply-btn">Apply Now →</a></div></article>
+                -->
             </div>
         </div>
     </section>
@@ -636,16 +643,26 @@
             pill.classList.add('active');
             const filter = pill.dataset.filter;
             const cards = document.querySelectorAll('.job-card');
+            let visibleCount = 0;
 
             cards.forEach(card => {
                 const isMatch = filter === 'all' || card.dataset.dept === filter;
                 if (isMatch) {
                     card.style.display = 'block';
                     gsap.to(card, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: 'power2.out', clearProps: 'all' });
+                    visibleCount++;
                 } else {
                     gsap.to(card, { opacity: 0, y: 20, scale: 0.95, duration: 0.3, ease: 'power2.in', onComplete: () => card.style.display = 'none' });
                 }
             });
+
+            const noJobsEl = document.getElementById('no-jobs-msg');
+            if (visibleCount === 0) {
+                noJobsEl.style.display = 'block';
+                gsap.fromTo(noJobsEl, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+            } else {
+                noJobsEl.style.display = 'none';
+            }
         });
     });
 
@@ -744,6 +761,21 @@
             submitBtn.textContent = 'Sending...';
 
             const formData = new FormData(careerForm);
+            const selectedPosition = formData.get('position');
+
+            if (selectedPosition !== "Teecom Services") {
+                const toast = document.getElementById('successToast');
+                const originalContent = toast.innerHTML;
+                toast.innerHTML = '<i class="feather icon-feather-alert-circle" style="color:var(--c-orange);font-size:1.2rem;"></i> we are Not hiring For this role Currently';
+                toast.classList.add('show');
+                setTimeout(() => { 
+                    toast.classList.remove('show'); 
+                    setTimeout(() => { toast.innerHTML = originalContent; }, 500);
+                }, 3000);
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+                return;
+            }
             
             fetch(careerForm.action, {
                 method: 'POST',
