@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="en-IN">
 
 <head>
@@ -1621,8 +1621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p class="sm-fs-12">Empowering businesses by boosting revenue growth through strategic SEO.</p>
                     </div>
                     <div class="col text-center p-70px xl-p-50px lg-p-40px sm-p-20px last-paragraph-no-margin border-end border-color-transparent-dark-very-light position-relative">
-                        <span class="position-absolute top-10px right-10px bg-base-color border-radius-18px text-white fs-11 lh-24 fw-600 text-uppercase ps-10px pe-10px d-none d-md-block">Hot</span>
-                        <h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">85%</h2>
+<h2 class="h1 fw-500 ls-minus-3px text-dark-gray mb-50px lg-mb-30px sm-mb-10px">85%</h2>
                         <span class="fs-20 fw-500 d-block mb-5px text-dark-gray sm-fs-16">Empowering Startup Success</span>
                         <p class="sm-fs-12">We help startups turn bold ideas into scalable and market success stories.</p>
                     </div>
@@ -1638,36 +1637,103 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-center mt-6 sm-mt-50px">
-                    <div class="col-12 col-xxl-2 col-lg-3 text-center text-lg-start md-mb-30px">
-                        <span class="fs-18 text-dark-gray">Trusted by top brands</span>
-                    </div>
-                    <div class="col-12 col-xl-7 col-lg-9">
-                        <div class="row row-cols-4 row-cols-md-4 text-center justify-content-center clients-style-05">
-                           
-                            <div class="col sm-mb-40px">
-                                <div class="client-box">
-                                    <a href="javascript:void(0)"><img src="images/logo-walmart-dark-gray.svg" class="h-30px" alt="Walmart logo" /></a> 
-                                </div>
+                    <div class="col-12">
+                        <!-- Client Logos Marquee Carousel -->
+                        <style>
+                            .client-marquee-wrap {
+                                position: relative;
+                                width: 100%;
+                                overflow: hidden;
+                            }
+                            /* Left & right blur/fade edges */
+                            .client-marquee-wrap::before,
+                            .client-marquee-wrap::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                width: 140px;
+                                z-index: 2;
+                                pointer-events: none;
+                            }
+                            .client-marquee-wrap::before {
+                                left: 0;
+                                background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 100%);
+                            }
+                            .client-marquee-wrap::after {
+                                right: 0;
+                                background: linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0) 100%);
+                            }
+                            .client-marquee-track {
+                                display: flex;
+                                align-items: center;
+                                gap: 60px;
+                                width: max-content;
+                                animation: clientMarquee 28s linear infinite;
+                            }
+                            .client-marquee-wrap:hover .client-marquee-track {
+                                animation-play-state: paused;
+                            }
+                            @keyframes clientMarquee {
+                                0%   { transform: translateX(0); }
+                                100% { transform: translateX(-50%); }
+                            }
+                            .client-marquee-item {
+                                flex-shrink: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 70px;
+                                padding: 6px 10px;
+                                opacity: 0.75;
+                                transition: opacity 0.3s ease, filter 0.3s ease;
+                            }
+                            .client-marquee-item:hover {
+                                opacity: 1;
+                            }
+                            .client-marquee-item img {
+                                height: 44px;
+                                width: auto;
+                                max-width: 160px;
+                                object-fit: contain;
+                                display: block;
+                                filter: grayscale(100%);
+                                transition: filter 0.3s ease;
+                            }
+                            .client-marquee-item:hover img {
+                                filter: grayscale(0%);
+                            }
+                            @media (max-width: 767px) {
+                                .client-marquee-wrap::before,
+                                .client-marquee-wrap::after { width: 60px; }
+                                .client-marquee-item img { height: 32px; max-width: 110px; }
+                                .client-marquee-track { gap: 36px; }
+                            }
+                        </style>
+                        <p class="text-center fs-14 fw-500 text-uppercase ls-2px mb-25px" style="letter-spacing:3px; color:#aaa;">Trusted by top brands</p>
+                        <div class="client-marquee-wrap">
+                            <div class="client-marquee-track">
+                                <!-- Set 1 -->
+                                <div class="client-marquee-item"><img src="images/client_logos/9x9_Logo.png" alt="9x9 Restaurant"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Anjali_logo.png" alt="Anjali" style="height:58px;"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/BYD_logo.png" alt="BYD"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Bengal Hyundai_logo.png" alt="Bengal Hyundai"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Embor_logo.png" alt="Embor"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Floric_logo.png" alt="Floric"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Papyrus_logo.png" alt="Papyrus"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Sanjhbati_logo.png" alt="Sanjhbati Collection" style="height:58px;"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Shimontini_logo.png" alt="Shimontini" style="height:58px;"></div>
+                                <!-- Set 2 (duplicate for seamless loop) -->
+                                <div class="client-marquee-item"><img src="images/client_logos/9x9_Logo.png" alt="9x9 Restaurant"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Anjali_logo.png" alt="Anjali" style="height:58px;"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/BYD_logo.png" alt="BYD"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Bengal Hyundai_logo.png" alt="Bengal Hyundai"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Embor_logo.png" alt="Embor"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Floric_logo.png" alt="Floric"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Papyrus_logo.png" alt="Papyrus"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Sanjhbati_logo.png" alt="Sanjhbati Collection" style="height:58px;"></div>
+                                <div class="client-marquee-item"><img src="images/client_logos/Shimontini_logo.png" alt="Shimontini" style="height:58px;"></div>
                             </div>
-                            
-                            <div class="col sm-mb-40px">
-                                <div class="client-box">
-                                    <a href="javascript:void(0)"><img src="images/logo-logitech-dark-gray.svg" class="h-30px" alt="Logitech logo" /></a> 
-                                </div>
-                            </div>
-                          
-                            <div class="col sm-mb-40px">
-                                <div class="client-box">
-                                    <a href="javascript:void(0)"><img src="images/logo-paypal-dark-gray.svg" class="h-30px" alt="Paypal logo" /></a> 
-                                </div>
-                            </div>
-                          
-                            <div class="col">
-                                <div class="client-box">
-                                    <a href="javascript:void(0)"><img src="images/logo-monday-dark-gray.svg" class="h-30px" alt="Monday.com logo" /></a> 
-                                </div>
-                            </div>
-                        
                         </div>
                     </div>
                 </div>
